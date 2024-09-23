@@ -1,0 +1,1 @@
+docker run -p "80:80" --rm -v %cd%:/var/www/html mattrayner/lamp:latest-1804

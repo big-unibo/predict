@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>IAM Demo</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <style id="compiled-css" type="text/css">
+
+        th, td {
+            border: 1px dotted;
+            background-color: white;
+        }
+
+        th {
+            font-weight: bold;
+        }
+
+        .sticky-col {
+            position: sticky;
+            left: -5px;
+        }
+
+        .sticky-row {
+            position: sticky;
+            top: -5px;
+        }
+
+        .sticky-top {
+            position: sticky;
+            top: -5px;
+            left: -5px;
+        }
+
+        .line {
+            fill: none;
+            stroke-width: 2px;
+        }
+
+        .dot {
+            stroke: #fff;
+        }
+
+        .legend rect {
+            fill: white;
+            stroke: black;
+            opacity: 0.8;
+        }
+
+        /* Center the loader */
+        #loader {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            z-index: 1;
+            margin: -75px 0 0 -75px;
+            border: 8px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 8px solid #bbbbbb;
+            width: 80px;
+            height: 80px;
+            -webkit-animation: spin 2s linear infinite;
+            animation: spin 2s linear infinite;
+        }
+
+        @-webkit-keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Add animation to "page content" */
+        .animate-bottom {
+            position: relative;
+            -webkit-animation-name: animatebottom;
+            -webkit-animation-duration: 1s;
+            animation-name: animatebottom;
+            animation-duration: 1s
+        }
+
+        @-webkit-keyframes animatebottom {
+            from {
+                bottom: -100px;
+                opacity: 0
+            }
+            to {
+                bottom: 0;
+                opacity: 1
+            }
+        }
+
+        @keyframes animatebottom {
+            from {
+                bottom: -100px;
+                opacity: 0
+            }
+            to {
+                bottom: 0;
+                opacity: 1
+            }
+        }
+
+        .parcoords {
+            display: block;
+        }
+
+        .parcoords svg,
+        .parcoords canvas {
+            font: 10px;
+            position: absolute;
+        }
+
+        .parcoords canvas {
+            opacity: 1;
+            pointer-events: none;
+        }
+
+        .axis .title {
+            font: 14px Serif;
+            transform: rotate(-21deg) translate(-5px, -6px);
+            fill: #000;
+        }
+    </style>
+
+    <script src="libs/d3.v4.js"></script>
+    <script src="libs/d3-color.v2.min.js"></script>
+    <script src="libs/d3-interpolate.v2.min.js"></script>
+    <script src="libs/d3-scale-chromatic.v2.min.js"></script>
+    <script src="libs/render-queue.js"></script>
+    <script src="libs/jquery-3.4.1.min.js"></script>
+    <script src="libs/popper.min.js"></script>
+    <script src="libs/bootstrap.min.js"></script>
+    <script src="js/chart-bubble.js"></script>
+    <script src="js/chart-choose.js"></script>
+    <script src="js/chart-groupedcolumn.js"></script>
+    <script src="js/chart-bar.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/html-table.js"></script>
+</head>
+
+<body>
+<div id="loader" style="display: none;"></div>
+
+<div style="width:95%; margin: auto">
+    <div style="text-align: center" id="div_image"></div>
+    <p></p>
+    <div id="firstintention"></div>
+    <div id="notebook"></div>
+</div>
+
+<script type="text/javascript">
+    //<![CDATA[
+    const params = {};
+    let session = new Date().getTime()
+    let username = "foo"
+    let curid = 0
+
+    function setFirstIntention() {
+        if (typeof params["cube"] === 'undefined' || params["cube"] === 'covid') {
+            $("#text_0").val(splitLine("with COVID19 describe cases by continent, month for continent='Europe'"))
+        } else if (params["cube"] === 'elec') {
+            $("#text_0").val(splitLine("with consommation_electrique by commune, categorieconsommation, annee for commune='35238 Rennes' and categorieconsommation = 'Entreprise' assess consototale"))
+        } else if (params["cube"] === 'elecext' || params["cube"] === 'elec-ext') {
+            $("#text_0").val(splitLine("with consommation_electrique_ext by commune, categorieconsommation, annee for commune='35238 Rennes' and categorieconsommation = 'Entreprise' assess consototale"))
+        }
+    }
+
+    function setParams() {
+        window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (str, key, value) { params[key] = value; });
+        if (params["test"]) {
+            login()
+        }
+        if (typeof params["cube"] === 'undefined' || params["cube"] === 'covid') {
+            $("#div_image").append('<img src="img/dfm-covid-weekly.svg" style="width: 40%" alt="DFM of the COVID cube"/>')
+        } else if (params["cube"] === 'elec') {
+            $("#div_image").append('<img src="img/dfm-french-elec.svg" style="width: 40%" alt="DFM of the French Electricity cube"/>')
+        } else if (params["cube"] === 'elecext' || params["cube"] === 'elec-ext') {
+            $("#div_image").append('<img src="img/dfm-french-elec-ext.svg" style="width: 40%" alt="DFM of the French Electricity cube"/>')
+        }
+        setFirstIntention()
+    }
+
+    function getCardDescription(previd, currText) {
+        if (previd == null) {
+            return ""
+        }
+        const prevText = $("#text_" + previd)[0].value
+        let ret = ""
+        if ((!prevText.includes('against') || prevText.includes('<against')) && !currText.includes('<against')) {
+            ret += "benchmark"
+        }
+        if ((!prevText.includes('using') || prevText.includes('<using')) && !currText.includes('<using')) {
+            if (ret === "") {
+                ret = "comparison"
+            } else {
+                ret += " & comparison"
+            }
+        }
+        if ((!prevText.includes('labels') || prevText.includes('<labels')) && !currText.includes('<labels')) {
+            if (ret === "") {
+                ret = "labeling"
+            } else {
+                ret += " & labeling"
+            }
+        }
+        if (ret === "") {
+            return ""
+        } else {
+            return "with " + ret + " suggestion"
+        }
+    }
+
+    allLabels = {}
+    function changeColor(key, components) {
+        if (components == null) {
+            components = allLabels[key];
+        }
+        const selected = $('#select_' + key).val();
+        let range;
+        switch (selected) {
+            case "rtg":
+                range = d3.schemeRdYlGn[Math.max(components.length, 3)].slice()
+                break;
+            case "gtr":
+                range = d3.schemeRdYlGn[Math.max(components.length, 3)].slice()
+                components = components.slice().reverse();
+                break;
+            case "cat":
+                range = d3.schemeCategory10.slice();
+                break;
+            default:
+                range = d3.schemeGnBu[Math.max(components.length, 3)].slice()
+        }
+        if (selected != "cat" && components.length == 2 && range.length == 3) {
+            range.splice(1, 1)
+        }
+        color = d3.scaleOrdinal().domain(components).range(range);
+        // color all the datapoints with their respective labels
+        d3
+            .select("#viz_" + key)
+            .selectAll("[datapoint=colored]")
+            .style("opacity", 1)
+            .style("stroke", "white")
+            .style("fill", function (d) {
+                var c = ""
+                if (d["label"] == null) {
+                    c = color(d)
+                } else {
+                    c = d3.color(color(d["label"]));
+                }
+                return c + "";
+            });
+        d3
+            .select("#viz_" + key)
+            .selectAll("[datapoint=negcolored]")
+            .style("opacity", 1)
+            .style("stroke", function (d) {
+                if (d["comparison"] > 0) {
+                    return "white"
+                } else {
+                    c = d3.color(color(d["label"]));
+                    return c + ""
+                }
+            })
+            .style("stroke-width", function (d) {
+                if (d["comparison"] < 0) {
+                    return 3
+                } else {
+                    return 1
+                }
+            })
+            .style("fill", function (d) {
+                if (d["comparison"] < 0) {
+                    return "white"
+                } else {
+                    c = d3.color(color(d["label"]));
+                    return c + ""
+                }
+            });
+        
+        d3
+            .select("#component_" + key)
+            .selectAll("[label]")
+            .each(function(i) {
+                const c = d3.color(this.style.background = color(this.getAttribute("label")));
+                $(this).css('border', "1px dotted").css("background-color", c + "");
+            });
+        
+        d3
+            .select("#pivot_" + key)
+            .selectAll("[label]")
+            .each(function(i) {
+                const c = d3.color(this.style.background = color(this.getAttribute("label")));
+                $(this).css('border', "1px dotted").css("background-color", c + "");
+            });
+    }
+
+    /**
+     * Check whether the text area contains all the clause necessary to build the intention.
+     * If all the clauses are there, then it is possible to "Execute" a complete statement,
+     * else refinement or complete are the only options
+     * @param key key of the current card
+     */
+    function checkButton(key, disabled) {
+        const textarea = $("#text_" + key)
+        const text = textarea[0].value
+        if (text.includes("using")) {
+            $("#btn_exe_" + key).hide();
+            $("#btn_ref_" + key).hide();
+            $("#btn_com_" + key).hide();
+        }
+    }
+
+    function createCard(intention, siblings, prevId, disabled) {
+        const colWidth = "col-" + Math.floor(12 / siblings)
+        const text = splitLine(intention)
+        const newlines = Math.max(text.split("\n").length - 1, 4)
+        let disabledTextAread = "disabled"
+        if (!disabled) {
+            disabledTextAread = ""
+        }
+        $(
+            '<div class="card mb-1 p-1 ' + colWidth + '" id="card_' + curid + '" style="float: left">' +
+            '    <div class="card-header">' +
+            '        <h5 class="card-title d-flex justify-content-between align-items-center">Intention ' + (curid ? curid : "") + '</h5>' +
+            // '        <h6 class="card-subtitle text-muted">' + getCardDescription(prevId, text) + '</h6>' +
+            '    </div>' +
+            '    <div class="card-body input-group input-group-sm overflow-auto align-items-center">' +
+            '        <textarea ' + disabledTextAread + ' class="form-control" id="text_' + curid + '" rows="1">' + text + '</textarea>' + // oninput="checkButton(' + curid + ')"
+            '        <button id="btn_com_' + curid + '" onclick="return send(\'com\', ' + curid + ',' + prevId + ', 1);" class="btn m-1 btn-primary">Execute</button>' +
+            '    </div>' +
+            '</div>'
+        ).prependTo(intention ? "#notebook" : "#firstintention");
+    }
+
+    function createSmallMultipleCards(groupid) {
+        $('<div class="mb-1 p-1 w-100" id="card_container_' + groupid + '">' +
+          '<div class="row" id="card_sm_' + groupid + '"></div>' +
+          '</div>'
+        ).prependTo("#notebook");
+    }
+
+    function createSmallMultipleCard(groupid, type) {
+        if (type == "assess") {
+            $(
+            '<div class="col-5 card p-1" style="float: left; overflow: auto">' +
+            '    <div class="d-flex flex-row">' +
+            '        <div class="p-1">Labeling color:</div>' +
+            '        <div class="p-1">' +
+            '            <select id="select_' + curid + '" class="form-select" aria-label="Default select example">' +
+            '                <option onclick="changeColor(' + curid + ')" selected value="neu">Neutral</option>' +
+            '                <option onclick="changeColor(' + curid + ')" value="gtr">Green to red</option>' +
+            '                <option onclick="changeColor(' + curid + ')" value="rtg">Red to green</option>' +
+            '                <option onclick="changeColor(' + curid + ')" value="cat">Categorical</option>' +
+            '            </select>' +
+            '        </div>' +
+            '    </div>' +
+            '    <div class="dataviz w-100 h-100" id="viz_' + curid + '"></div>' +
+            '</div>'
+            ).appendTo("#card_sm_" + groupid);
+        } else if (type == "describe") {
+            $(
+            '<div class="col-5 card p-1" style="float: left; overflow: auto">' +
+            '    <div class="d-flex flex-row">' +
+            '        <div class="p-1">Color:</div>' +
+            '        <div class="p-1">' +
+            '            <select id="select_' + curid + '" class="form-select" aria-label="Default select example">' +
+            '                <option onclick="changeColor(' + curid + ')" selected value="cat">Categorical</option>' +
+            '            </select>' +
+            '        </div>' +
+            '    </div>' +
+            '    <div class="dataviz w-100 h-100" id="viz_' + curid + '"></div>' +
+            '</div>'
+            ).appendTo("#card_sm_" + groupid);
+        } else {
+            $(
+            '<div class="col-' + (type == "pivot" ? '4' : '3') + ' card p-1" style="float: left' + (type == "pivot" ? '; overflow: auto' : "") + '">' +
+            '    <div class="dataviz w-100" style=" text-align: center; ' + (type == "pivot" ? '' : 'justify-content: center; display: flex;') + '" id="' + type + '_' + curid + '"></div>' +
+            '</div>'
+            ).appendTo("#card_sm_" + groupid);   
+        }
+    }
+
+    function splitLine(intention) {
+        return intention;
+        // return intention.replace(/by|describe|assess|against|<using|using|<labels|labels/gi, function(x) { return '\n' + x})
+    }
+
+    $(document).ready(function() {
+        $('#exampleModal').on('keypress', function (event) {
+            const keycode = (event.keyCode ? event.keyCode : event.which);
+            if (keycode === '13') {
+                // do nothing, otherwise the modal closes
+            }
+        });
+        setParams()
+        cleanAll()
+    })
+
+    function cleanAll() {
+        for (let i = 0; i <= curid; i++) {
+            $("#card_container_" + i).remove()
+            $("#card_sm_" + i).remove()
+            $("#card_" + i).remove()
+        }
+        curid = 0
+        session = username + "-" + new Date().getTime()
+        createCard("", 1, undefined, false) // with COVID19 by country for continent='Europe' assess deaths
+        setFirstIntention()
+        checkButton(0)
+    }
+
+    function addEmptyCard() {
+        curid += 1
+        createCard("", 1, undefined, false)
+    }
+
+    function send(actiontype, id, previd, k) {
+        document.getElementById("loader").style.display = "block"
+        $.ajax({
+            url: config["ip"],
+            type: "GET",
+            crossDomain: true,
+            data: {sessionid: session, value: $("#text_" + id)[0].value + " ", k: k, actiontype: actiontype},
+            dataType: "json",
+            success: function (newdata) {
+                if (!$.isEmptyObject(newdata)) {
+                    if (typeof newdata["error"] !== "undefined") {
+                        alert("ERROR: " + newdata["error"]);
+                    } else {
+                        const groupid = curid
+                        createSmallMultipleCards(groupid)
+
+                        for (const [key, value] of Object.entries(newdata)) {
+                            curid += 1
+                            createCard(value["intention"], Object.keys(newdata).length, id, true)
+                            checkButton(curid, true)
+                        }
+
+                        curid = groupid
+                        let v;
+                        for (const [key, value] of Object.entries(newdata)) {
+                            curid += 1
+                            createSmallMultipleCard(groupid, value["type"])
+                            v = value;
+                        }
+
+                        createSmallMultipleCard(groupid, "component");
+                        $("#component_" + curid).html(buildHtmlTable(v["components"], "components"));
+
+                        createSmallMultipleCard(groupid, "pivot");
+                        $("#pivot_" + curid).html(buildHtmlPivot(v["pivot"]["table"], v["pivot"]["headers"]["measures"]));
+
+                        update(curid, v)
+                    }
+                }
+                if (actiontype === "done") {
+                    cleanAll()
+                    send('start', curid, 'foo', 0)
+                }
+                document.getElementById("loader").style.display = "none"
+            },
+            error: function (newdata) {
+                alert("ERROR: Server not reachable. " + newdata);
+                document.getElementById("loader").style.display = "none"
+            }
+        });
+    }
+
+    function greyPalette() {
+        return ["#D2D4D3", "#383A39", "#949695", "#3A3C3B", "#767877"];
+        // return ["#B2B4B3", "#A3A5A4", "#949695", "#858786", "#767877", "#676968", "#585A59", "#494B4A"];
+    }
+
+    var _table_ = document.createElement('table'), _tr_ = document.createElement('tr'), _th_ = document.createElement('th'), _td_ = document.createElement('td');
+    function buildKeyValueTable(obj) {
+        var table = _table_.cloneNode(false);
+        Object.keys(obj).forEach(function(key) {
+            var tr = _tr_.cloneNode(false);
+            var td = _td_.cloneNode(false);
+            td.appendChild(document.createTextNode(key));
+            tr.appendChild(td);
+            var td = _td_.cloneNode(false);
+            td.appendChild(document.createTextNode(obj[key]));
+            tr.appendChild(td);
+            table.appendChild(tr);
+        });
+        return table;
+    }
+
+    let color = []
+
+    function update(id, data) {
+        // get the distinct labels
+        let components = new Set();
+        data["raw"].forEach(function (d) {
+            components.add(d["label"] + "");
+        });
+        // sort the labels
+        components = Array.from(components).sort(function (a, b) {  return a.localeCompare(b); });
+        // get the color of each label
+        allLabels[id] = components
+        changeColor(id, components)
+        let ret = chooseChart("viz_" + id, data, "label", false, "label", "foo", "bar", color);
+        $("#pivot_" + id).css({
+            "maxHeight": ret[0]
+        });
+        changeColor(id, components)
+    }
+    //]]>
+
+    function login() {
+        $('#exampleModal').modal('show')
+    }
+
+    function saveSession() {
+        username = $('#username').val()
+        session = username + "-" + new Date().getTime()
+        send('start', curid, 'foo', 0)
+    }
+</script>
+
+</body>
+</html>
