@@ -1,4 +1,4 @@
-# Intentional OLAP: EXPLAIN
+# Intentional OLAP: PREDICT
 
 [![build](https://github.com/big-unibo/explain/actions/workflows/build.yml/badge.svg)](https://github.com/big-unibo/explain/actions/workflows/build.yml)
 
