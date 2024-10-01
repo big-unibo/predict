@@ -263,19 +263,32 @@ public final class Utils {
         return s;
     }
 
-    public static String getFrom(final Cube c, final List<Entity> attributes) {
+    public static String getFrom(final Cube c, final List<Entity> attributes, final boolean generateMissingData) {
         String from = "";
         Set<String> tabIns = Sets.newHashSet();
         Pair<String, String> ftdet = QueryGenerator.getFactTable(c);
         from = ftdet.getRight() + " FT";
-        for (Entity mde : attributes) {
-            final String idT = mde.refToOtherTable();
-            if (!tabIns.contains(idT)) {
-                Pair<String, String> detTab = QueryGenerator.getTabDetails(c, ftdet.getLeft(), idT);
-                // TODO: note that this assume that the attributes name of pk and foreign keys are matching
-                from += " INNER JOIN " + detTab.getLeft() + " ON " + detTab.getLeft() + "." + detTab.getRight() + " = FT." + detTab.getRight();
-                tabIns.add(idT);
+        if (!generateMissingData) {
+            for (Entity mde : attributes) {
+                final String idT = mde.refToOtherTable();
+                if (!tabIns.contains(idT)) {
+                    Pair<String, String> detTab = QueryGenerator.getTabDetails(c, ftdet.getLeft(), idT);
+                    // TODO: note that this assumes that the attributes name of pk and foreign keys are matching
+                    from += " INNER JOIN " + detTab.getLeft() + " ON " + detTab.getLeft() + "." + detTab.getRight() + " = FT." + detTab.getRight();
+                    tabIns.add(idT);
+                }
             }
+        } else {
+            final Pair<String, String> res = attributes.stream()
+                    .filter(entity -> !tabIns.contains(entity.refToOtherTable())) // do not add the same table twice
+                    .map(entity -> {
+                        final String idT = entity.refToOtherTable();
+                        Pair<String, String> detTab = QueryGenerator.getTabDetails(c, ftdet.getLeft(), idT);
+                        tabIns.add(idT);
+                        return Pair.of("(select *" /*+ detTab.getRight() + ", " + entity.nameInTable()*/ + " from " + detTab.getLeft() + ")", "cartesian." + detTab.getRight() + " = FT." + detTab.getRight());
+                    })
+                    .reduce((o1, o2) -> Pair.of(o1.getLeft() + ", " + o2.getLeft(), o1.getRight() + " AND " + o2.getRight())).get();
+            from += " right join (select * from " + res.getLeft() + ") cartesian on (" + res.getRight() + ")";
         }
         return from;
     }
@@ -352,10 +365,21 @@ public final class Utils {
     /**
      * JSON object to SQL query
      *
-     * @param json object to convert
+     * @param json                object to convert
      * @return SQL query
      */
     public static String createQuery(final Cube c, final JSONObject json) {
+        return createQuery(c, json, false);
+    }
+
+    /**
+     * JSON object to SQL query
+     *
+     * @param json                object to convert
+     * @param generateMissingData whether missing data should be generated to fill cube sparsity
+     * @return SQL query
+     */
+    public static String createQuery(final Cube c, final JSONObject json, final boolean generateMissingData) {
         // what goes in the group by clause (i.e., attributes + properties)
         final Set<Object> coordinateSet = new HashSet<>();
 
@@ -390,7 +414,7 @@ public final class Utils {
         while (gcIterator.hasNext()) {
             final Entity attr = QueryGenerator.getLevel(c, unquote(gcIterator.next().toString()));
             attributes.add(attr);
-            final String attrString = (hasNestedQuery ? "t1." + attr.nameInTable() : attr.fullQualifier()).toLowerCase() + (gcIterator.hasNext() ? ", " : "");
+            final String attrString = (generateMissingData? "cartesian." + attr.nameInTable() : (hasNestedQuery ? "t1." + attr.nameInTable() : attr.fullQualifier())).toLowerCase() + (gcIterator.hasNext() ? ", " : "");
             groupby += attrString;
             select += attrString;
         }
@@ -407,7 +431,7 @@ public final class Utils {
                 attributes.add(attr);
                 final JSONArray values = scClause.getJSONArray(quote(Type.VAL));
                 final String value;
-                final String attrToAdd = enrichDate(c, attr.nameInTable(), (hasNestedQuery ? "t1." + attr.nameInTable() : attr.fullQualifier()));
+                final String attrToAdd = enrichDate(c, attr.nameInTable(), (generateMissingData? "cartesian." + attr.nameInTable() : (hasNestedQuery ? "t1." + attr.nameInTable() : attr.fullQualifier())));
                 if (unquote(scClause.getString(quote(Type.COP))).equalsIgnoreCase("in")) {
                     value = "(" + values.toList().stream().map(a -> unquote(a.toString())).reduce((a, b) -> a + "," + b).get() + ")";
                 } else if (unquote(scClause.getString(quote(Type.COP))).equalsIgnoreCase("between")) {
@@ -422,12 +446,12 @@ public final class Utils {
         // populate the from clause
         String from = " FROM ";
         if (!hasNestedQuery) {
-            from += getFrom(c, attributes);
+            from += getFrom(c, attributes, generateMissingData);
         } else {
             final LongAdder counter = new LongAdder();
             from += json.getJSONArray(quote("FROM")).toList().stream().map(innerquery -> {
                 counter.increment();
-                return "(" + Utils.createQuery(c, getObject(innerquery)) + ") t" + counter.intValue();
+                return "(" + Utils.createQuery(c, getObject(innerquery), generateMissingData) + ") t" + counter.intValue();
             }).reduce((a, b) -> a + "," + b).get();
             if (has(json, "JOIN")) {
                 where += json.getJSONArray(quote("JOIN")).toList().stream().map(attribute -> "t1." + unquote(attribute) + " = t2." + unquote(attribute)).reduce((a, b) -> a + " and " + b).get();

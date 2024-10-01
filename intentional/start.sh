@@ -8,7 +8,7 @@ if [ -f .env ]; then
 fi
 
 ./stop.sh
-docker-compose up --build -d
+docker compose up --build -d
 
 ./wait-for-it.sh ${ORACLE_IP}:${ORACLE_PORT} --strict --timeout=0 -- echo "ORACLE is up"
 

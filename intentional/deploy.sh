@@ -11,5 +11,5 @@ fi
 
 ./gradlew clean war
 rm -rf "${TOMCAT_PATH}\IAM-Demo"
-cp build/libs/IAM-Demo.war "${TOMCAT_PATH}\webapps"
+cp build/libs/PREDICT.war "${TOMCAT_PATH}\webapps"
 echo "Done."

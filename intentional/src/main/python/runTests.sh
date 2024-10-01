@@ -8,6 +8,7 @@ set -exo
 #   pip install -r requirements.txt
 # fi
 source venv/bin/activate # activate the virtual environment
+python3 -m unittest -f TestPredict.py
 python3 gen_cube.py
 python3 -m unittest -f TestAssess.py
 python3 -m unittest -f TestAssessExt.py

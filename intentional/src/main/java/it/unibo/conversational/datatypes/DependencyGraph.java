@@ -12,6 +12,72 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 public class DependencyGraph {
+
+    private static Graph<String, DefaultEdge> getWateringDependencies() {
+        final DefaultDirectedGraph<String, DefaultEdge> g = new DefaultDirectedGraph<>(DefaultEdge.class);
+        g.addVertex("type");
+        g.addVertex("measurement_type");
+        g.addEdge("type", "measurement_type");
+
+        // TIME
+        g.addVertex("timestamp");
+        g.addVertex("hour");
+        g.addEdge("timestamp", "hour");
+        g.addVertex("day");
+        g.addEdge("hour", "day");
+        g.addVertex("month");
+        g.addEdge("day", "month");
+        g.addVertex("week");
+        g.addEdge("day", "week");
+        g.addVertex("year");
+        g.addEdge("month", "year");
+        g.addVertex("all_date");
+        g.addEdge("year", "all_date");
+
+        // AGENT
+        g.addVertex("agent");
+        g.addVertex("agent_type");
+        g.addEdge("agent", "agent_type");
+        g.addVertex("all_agent");
+        g.addEdge("agent_type", "all_agent");
+
+        // FIELD
+        g.addVertex("field");
+        g.addVertex("all_field");
+        g.addEdge("field", "all_field");
+
+        return g;
+    }
+
+    private static Graph<String, DefaultEdge> getCimiceDependencies() {
+        final DefaultDirectedGraph<String, DefaultEdge> g = new DefaultDirectedGraph<>(DefaultEdge.class);
+        // TIME
+        g.addVertex("week");
+        g.addVertex("month");
+        g.addEdge("week", "month");
+        g.addVertex("year");
+        g.addEdge("month", "year");
+        g.addVertex("all_date");
+        g.addEdge("year", "all_date");
+
+        // SPACE
+        g.addVertex("gid");
+        g.addVertex("province");
+        g.addEdge("gid", "province");
+        g.addVertex("region");
+        g.addEdge("province", "region");
+        g.addVertex("all_region");
+        g.addEdge("region", "all_region");
+
+        // CROP
+        g.addVertex("crop_id");
+        g.addVertex("crop_type");
+        g.addEdge("crop_id", "crop_type");
+        g.addVertex("all_crop");
+        g.addEdge("crop_type", "all_crop");
+        return g;
+    }
+
     private static Graph<String, DefaultEdge> getCovidMartDependencies() {
         final DefaultDirectedGraph<String, DefaultEdge> g = new DefaultDirectedGraph<>(DefaultEdge.class);
         // DATE
@@ -58,6 +124,10 @@ public class DependencyGraph {
     
     public static Graph<String, DefaultEdge> getDependencies(final Cube cube) {
         switch (cube.getFactTable()) {
+            case "ft_measurement":
+                return getWateringDependencies();
+            case "cimice_ft_captures":
+                return getCimiceDependencies();
             case "covidfact":
                 return getCovidMartDependencies();
             case "ft":

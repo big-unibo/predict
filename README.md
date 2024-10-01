@@ -1,13 +1,10 @@
 # Intentional OLAP: PREDICT
 
-[![build](https://github.com/big-unibo/explain/actions/workflows/build.yml/badge.svg)](https://github.com/big-unibo/explain/actions/workflows/build.yml)
+[![build](https://github.com/w4bo/predict/actions/workflows/build.yml/badge.svg)](https://github.com/w4bo/predict/actions/workflows/build.yml)
 
 ## Research papers
 
-Implementation of the following research papers:
-
-- Francia, Matteo, Stefano Rizzi, and Patrick Marcel. "Explaining cube measures through Intentional Analytics." **Information Systems** 121 (2024): 102338. DOI: https://doi.org/10.1016/j.is.2023.102338
-- Francia, Matteo, Stefano Rizzi, and Patrick Marcel. "The Whys and Wherefores of Cubes." **Proceedings of the 25th International Workshop on Design, Optimization, Languages and Analytical Processing of Big Data (DOLAP)**. 2023. URL: https://ceur-ws.org/Vol-3369/paper4.pdf
+This repository implements the paper "Predicting Multidimensional Cubes Through Intentional Analytics" submitted to the IEEE TKDE journal.
 
 ## Running the tests
 
@@ -20,7 +17,7 @@ This repository allows the user to:
 Running the experiments requires the following software to be installed:
 - Docker
 - Java 14
-- Python 3.10
+- Python 3.12
 
 Once the software is installed, execute the following code to run the tests.
 
@@ -37,11 +34,3 @@ bash stop.sh
 ## Working and deploying the application
 
 - Change the necessary files (see the ones copied by `init.sh`)
-- Deploy the web application on Tomcat
-
-```sh
-./deploy.sh
-```
-
-- **Remember** to `chmod -R 777` the folders `scr/main/python` and the one containing the Oracle client 
-- (If using Intellij) **Remember** to set the `LD_LIBRARY_PATH` in the run/debug configuration (see the `.env` file)

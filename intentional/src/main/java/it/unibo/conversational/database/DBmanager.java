@@ -270,6 +270,7 @@ public final class DBmanager {
                 // .createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
         ) {
             stmt.setFetchSize(1000000);
+            System.out.println(sql);
             ResultSet res = stmt.executeQuery(sql);
             continuation.apply(res);
             res.close();

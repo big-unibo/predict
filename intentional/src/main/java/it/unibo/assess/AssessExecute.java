@@ -93,15 +93,15 @@ public class AssessExecute {
     public static JSONObject execute(final Assess d, final String path, final String pythonPath) throws Exception {
         final long timeCube;
         if (d.getBenchmarkType().equals(Assess.BenchmarkType.TARGET)) {
-            timeCube = d.writeMultidimensionalCube(path, d.getJSON(), "");
+            timeCube = d.writeMultidimensionalCube(path, d.getJSON(), "", false);
             d.setTimeCube(timeCube);
         } else {
             final JSONObject query = new JSONObject();
             switch (d.getExecutionPlan()) {
                 case JOININMEMORY:
-                    final long timeBenchmark = d.writeMultidimensionalCube(path, d.createBenchmark().getJSON(), "bc");
+                    final long timeBenchmark = d.writeMultidimensionalCube(path, d.createBenchmark().getJSON(), "bc", false);
                     d.setTimeBenchmark(timeBenchmark);
-                    timeCube = d.writeMultidimensionalCube(path, d.getJSON(), "");
+                    timeCube = d.writeMultidimensionalCube(path, d.getJSON(), "", false);
                     d.setTimeCube(timeCube);
                     break;
                 case JOININDBMS:

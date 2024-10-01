@@ -107,7 +107,7 @@ class AssessExt(var k: Int = 3) : Assess(null) {
                 clauses.remove(it)
                 clauses.add(Triple.of(it.left, "in", members.map { "'" + it.split("_")[0] + "'" }))
                 "select ${it.right[0]} as $attr $propClause, t.* " +
-                        "from (${Utils.createQuery(cube, json)}) " +
+                        "from (${Utils.createQuery(cube, json, false)}) " +
                         "pivot (sum($measure) for $attr in (" +
                         members
                             .filter { a -> (pivotId++ == 0 || pivotId > 0 && a != value) && (a.contains(value.replace("'", "")) || a.length < 30) }
@@ -234,7 +234,7 @@ class AssessExt(var k: Int = 3) : Assess(null) {
                             normalizedMeasures += norm
                         }
                         curJSON.put(quote(Utils.Type.MC), JSONArray(normalizedMeasures))
-                        var curquery = Utils.createQuery(cube, curJSON)
+                        var curquery = Utils.createQuery(cube, curJSON, false)
                         if (parent.contains("all")) {
                             curquery = curquery
                                 .replace(", $table.$child", "", ignoreCase = true)
@@ -258,7 +258,7 @@ class AssessExt(var k: Int = 3) : Assess(null) {
         properties.addAll(attributes.flatMap { DependencyGraph.getProperties(cube, it) }.toMutableList())
         clauses.clear()
         clauses.addAll(originalClauses)
-        query = "(" + Utils.createQuery(cube, json) + ") t0" + query
+        query = "(" + Utils.createQuery(cube, json, false) + ") t0" + query
         properties.clear()
         attributes.clear()
         attributes.addAll(originalAttributes)

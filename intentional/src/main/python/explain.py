@@ -229,7 +229,7 @@ def run(X, measure, measures, using, execution_id=-1):
         else:
             raise ValueError("Unknown model: " + model)
         end_time = round((time.time() - start) * 1000)  # time is in ms
-        P = P.append(curP)
+        P = pd.concat([P, curP], ignore_index=True)
         stats.append([execution_id, model, end_time])
     return P, stats
 

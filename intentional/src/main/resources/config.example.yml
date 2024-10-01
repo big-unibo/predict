@@ -3,6 +3,30 @@ oracleclient: '!HOME!/libs/instantclient_21_1'
 webapp: sales_fact_1997
 cubes:
   - dataMart: xe
+    factTable: cimice_ft_captures
+    synonyms:
+      - CIMICE
+    metadata: xe
+    dbms: oracle
+    ip: 127.0.0.1
+    port: 1521
+    create: false
+    importmembers: false
+    user: cimice
+    pwd: oracle
+  - dataMart: xe
+    factTable: ft_measurement
+    synonyms:
+      - WATERING
+    metadata: xe
+    dbms: oracle
+    ip: 127.0.0.1
+    port: 1521
+    create: false
+    importmembers: false
+    user: measurement
+    pwd: oracle
+  - dataMart: xe
     factTable: sales_fact_1997
     synonyms:
       - SALES
