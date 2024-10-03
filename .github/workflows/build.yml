@@ -34,13 +34,10 @@ jobs:
           bash stop.sh
       - name: Run the notebooks
         run: |
-          cd intentional/src/main/python
-          pip install -r requirements.txt
-          pip install jupyter
-          for f in *.ipynb;
-            do echo "Processing $f file...";
-            jupyter nbconvert --execute --to notebook --inplace $f
-          done
+          cd intentional
+          bash init.sh
+          cd src/main/python
+          bash runNotebooks.sh
 
   release:
     needs:
