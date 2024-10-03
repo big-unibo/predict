@@ -1,6 +1,6 @@
 # Intentional OLAP: PREDICT
 
-[![build](https://github.com/w4bo/predict/actions/workflows/build.yml/badge.svg)](https://github.com/w4bo/predict/actions/workflows/build.yml)
+[![build](https://github.com/big-unibo/predict/actions/workflows/build.yml/badge.svg)](https://github.com/big-unibo/predict/actions/workflows/build.yml)
 
 ## Research papers
 
