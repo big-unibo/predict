@@ -1,0 +1,57 @@
+cardinality,execution_id,executionplan,intention,intention_characters,query_bytes,query_characters,query_cost,query_rows,time_model,time_query
+24,1adc3e11-142d-4b76-bca9-0064c9432c55,"Plan hash value: 518437082
+
+---------------------------------------------------------------------------------------
+| Id  | Operation           | Name            | Rows  | Bytes | Cost (%CPU)| Time     |
+---------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT    |                 |    24 |   696 |   138   (8)| 00:00:02 |
+|   1 |  SORT GROUP BY      |                 |    24 |   696 |   138   (8)| 00:00:02 |
+|*  2 |   HASH JOIN OUTER   |                 | 86835 |  2459K|   131   (4)| 00:00:02 |
+|   3 |    TABLE ACCESS FULL| TIME_BY_DAY     |   730 |  8760 |     4   (0)| 00:00:01 |
+|   4 |    TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  1441K|   126   (3)| 00:00:02 |
+---------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""TIME_BY_DAY"".""TIME_ID""=""FT"".""TIME_ID""(+))
+","with sales predict unit_sales by the_month against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",116,696.0,304.0,138.0,24.0,12905,37
+72,bc172d04-b2b5-4cff-ba2f-7e9214116877,"Plan hash value: 1122827370
+
+---------------------------------------------------------------------------------------------------
+| Id  | Operation               | Name            | Rows  | Bytes |TempSpc| Cost (%CPU)| Time     |
+---------------------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT        |                 |    51 |  2244 |       |  5255   (3)| 00:01:04 |
+|   1 |  SORT GROUP BY          |                 |    51 |  2244 |       |  5255   (3)| 00:01:04 |
+|*  2 |   HASH JOIN RIGHT OUTER |                 |  1138K|    47M|  2800K|  5163   (2)| 00:01:02 |
+|   3 |    TABLE ACCESS FULL    | SALES_FACT_1997 | 86835 |  1780K|       |   126   (3)| 00:00:02 |
+|   4 |    VIEW                 |                 |  1138K|    24M|       |  2993   (1)| 00:00:36 |
+|   5 |     MERGE JOIN CARTESIAN|                 |  1138K|    24M|       |  2993   (1)| 00:00:36 |
+|   6 |      TABLE ACCESS FULL  | PRODUCT         |  1560 | 17160 |       |     8   (0)| 00:00:01 |
+|   7 |      BUFFER SORT        |                 |   730 |  8760 |       |  2985   (1)| 00:00:36 |
+|   8 |       TABLE ACCESS FULL | TIME_BY_DAY     |   730 |  8760 |       |     2   (0)| 00:00:01 |
+---------------------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""CARTESIAN"".""PRODUCT_ID""=""FT"".""PRODUCT_ID""(+) AND
+""CARTESIAN"".""TIME_ID""=""FT"".""TIME_ID""(+))
+","with sales predict unit_sales by product_family, the_month against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",132,2244.0,448.0,5255.0,51.0,60829,369
+730,cc19bdd3-778e-4597-8150-d99418e32c3e,"Plan hash value: 518437082
+
+---------------------------------------------------------------------------------------
+| Id  | Operation           | Name            | Rows  | Bytes | Cost (%CPU)| Time     |
+---------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT    |                 |   730 | 21170 |   138   (8)| 00:00:02 |
+|   1 |  SORT GROUP BY      |                 |   730 | 21170 |   138   (8)| 00:00:02 |
+|*  2 |   HASH JOIN OUTER   |                 | 86835 |  2459K|   131   (4)| 00:00:02 |
+|   3 |    TABLE ACCESS FULL| TIME_BY_DAY     |   730 |  8760 |     4   (0)| 00:00:01 |
+|   4 |    TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  1441K|   126   (3)| 00:00:02 |
+---------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""TIME_BY_DAY"".""TIME_ID""=""FT"".""TIME_ID""(+))
+","with sales predict unit_sales by the_date against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",115,21170.0,301.0,138.0,730.0,61132,42
