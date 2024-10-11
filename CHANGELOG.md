@@ -1,3 +1,24 @@
+## [1.0.1](https://github.com/big-unibo/predict/compare/1.0.0...1.0.1) (2024-10-11)
+
+### Dependency updates
+
+* **deps:** update dependency notebook to v7.2.2 ([95ef4de](https://github.com/big-unibo/predict/commit/95ef4de8c168904bd16bda6c7ef19665e23ce24b))
+* **deps:** update dependency prophet to v1.1.6 ([7338a34](https://github.com/big-unibo/predict/commit/7338a340bd539f1a9d8ae8c30f0926c508749e97))
+* **deps:** update dependency scikit-learn to v1.5.2 ([a3e2587](https://github.com/big-unibo/predict/commit/a3e2587b7e487efec8ebd28b17171264615c072d))
+* **deps:** update dependency scipy to v1.14.1 ([280ce67](https://github.com/big-unibo/predict/commit/280ce6786c339c38dc49088059fb54fb4caaf35e))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.111 ([8d65d6b](https://github.com/big-unibo/predict/commit/8d65d6b5e8fb39e93d1ce9196fe9f644a333f24c))
+* **deps:** update dependency sqlalchemy to v2.0.35 ([87044b5](https://github.com/big-unibo/predict/commit/87044b5fc57cf11b013a2d47b05f681af4ddf338))
+* **deps:** update dependency statsmodels to v0.14.4 ([3447195](https://github.com/big-unibo/predict/commit/344719560d4e31c16aa851dbfb5143a4e17d81a2))
+
+### Bug Fixes
+
+* **deps:** update dependency io.github.cdimascio:dotenv-kotlin to v6.4.2 ([4382846](https://github.com/big-unibo/predict/commit/4382846d8302c85f8ac9e1f6cb0dce4bc96e1fec))
+
+### Build and continuous integration
+
+* **deps:** update actions/setup-java action to v4.2.2 ([1518485](https://github.com/big-unibo/predict/commit/15184856d951f8faa6cdf2994b9daf66a24928bf))
+* **deps:** update actions/setup-node action to v4.0.4 ([4c44191](https://github.com/big-unibo/predict/commit/4c44191d9e5e5a71c5b96d94a029976e59b59b09))
+
 ## 1.0.0 (2024-10-04)
 
 ### Features
