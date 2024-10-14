@@ -1,3 +1,13 @@
+## [1.0.4](https://github.com/big-unibo/predict/compare/1.0.3...1.0.4) (2024-10-14)
+
+### Bug Fixes
+
+* **deps:** update slf4j monorepo to v2.0.16 ([e26b3c3](https://github.com/big-unibo/predict/commit/e26b3c3f94abef3526868efa595a9c1a53003819))
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v4.2.1 ([c3d7132](https://github.com/big-unibo/predict/commit/c3d7132e3be5cb3784d08fd680c336a3fa27fe16))
+
 ## [1.0.3](https://github.com/big-unibo/predict/compare/1.0.2...1.0.3) (2024-10-13)
 
 ### Bug Fixes
