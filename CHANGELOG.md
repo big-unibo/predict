@@ -1,3 +1,17 @@
+## [1.0.5](https://github.com/big-unibo/predict/compare/1.0.4...1.0.5) (2024-10-16)
+
+### Dependency updates
+
+* **deps:** update node.js to 20.18 ([bf64fd8](https://github.com/big-unibo/predict/commit/bf64fd8c66845edf4e346c95bcbe5ae8d68c7e48))
+
+### Bug Fixes
+
+* **deps:** update dependency com.fasterxml.jackson.dataformat:jackson-dataformat-yaml to v2.18.0 ([faafe31](https://github.com/big-unibo/predict/commit/faafe31699a276593999be68d44f61b2422c1d23))
+
+### Build and continuous integration
+
+* **deps:** update actions/setup-java action to v4.4.0 ([5d81862](https://github.com/big-unibo/predict/commit/5d81862227e9511b21d36f27cf729f88994d9c27))
+
 ## [1.0.4](https://github.com/big-unibo/predict/compare/1.0.3...1.0.4) (2024-10-14)
 
 ### Bug Fixes
