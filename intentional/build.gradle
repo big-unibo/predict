@@ -73,7 +73,7 @@ dependencies {
     implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
     // java
     implementation 'mysql:mysql-connector-java:8.0.33'
-    implementation 'com.github.doyaaaaaken:kotlin-csv-jvm:1.9.3'
+    implementation 'com.github.doyaaaaaken:kotlin-csv-jvm:1.10.0'
     implementation 'org.apache.commons:commons-csv:1.11.0'
     implementation 'org.jgrapht:jgrapht-core:1.5.2'
     implementation 'edu.stanford.nlp:stanford-corenlp:4.5.7'
