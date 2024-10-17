@@ -1,3 +1,14 @@
+## [1.0.6](https://github.com/big-unibo/predict/compare/1.0.5...1.0.6) (2024-10-17)
+
+### Dependency updates
+
+* **deps:** update dependency psycopg2-binary to v2.9.10 ([9bdf8da](https://github.com/big-unibo/predict/commit/9bdf8da3cd416360914d8cc5987c2b495f7836ac))
+* **deps:** update dependency sqlalchemy to v2.0.36 ([a0b3098](https://github.com/big-unibo/predict/commit/a0b3098aad879fce743e41ab1d13d8a08775cc36))
+
+### Bug Fixes
+
+* **deps:** update dependency com.fasterxml.jackson.datatype:jackson-datatype-jsr310 to v2.18.0 ([34c0a0f](https://github.com/big-unibo/predict/commit/34c0a0f64986d3f49bc97dfdf09e88535d896489))
+
 ## [1.0.5](https://github.com/big-unibo/predict/compare/1.0.4...1.0.5) (2024-10-16)
 
 ### Dependency updates
