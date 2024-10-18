@@ -1,3 +1,9 @@
+## [1.0.7](https://github.com/big-unibo/predict/compare/1.0.6...1.0.7) (2024-10-18)
+
+### Bug Fixes
+
+* **deps:** update dependency com.github.doyaaaaaken:kotlin-csv-jvm to v1.10.0 ([5839247](https://github.com/big-unibo/predict/commit/5839247612e5b61300f23a3579f26aff7472d915))
+
 ## [1.0.6](https://github.com/big-unibo/predict/compare/1.0.5...1.0.6) (2024-10-17)
 
 ### Dependency updates
