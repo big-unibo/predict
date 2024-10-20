@@ -1,3 +1,9 @@
+## [1.0.11](https://github.com/big-unibo/predict/compare/1.0.10...1.0.11) (2024-10-20)
+
+### Bug Fixes
+
+* **deps:** update dependency org.apache.commons:commons-lang3 to v3.17.0 ([7f6cd31](https://github.com/big-unibo/predict/commit/7f6cd3165dc029f7a0e6461c103aa18f7e745e65))
+
 ## [1.0.10](https://github.com/big-unibo/predict/compare/1.0.9...1.0.10) (2024-10-20)
 
 ### Bug Fixes
