@@ -1,3 +1,13 @@
+## [1.0.13](https://github.com/big-unibo/predict/compare/1.0.12...1.0.13) (2024-10-22)
+
+### Dependency updates
+
+* **deps:** update dependency pyarrow to v16 ([9aa47cb](https://github.com/big-unibo/predict/commit/9aa47cbc2c28a50d28e5ddec91314197e79d22d4))
+
+### Bug Fixes
+
+* **deps:** update junit5 monorepo to v5.11.3 ([ffb4682](https://github.com/big-unibo/predict/commit/ffb4682de4f87937ae12b6c3f690b4b38ffb57c0))
+
 ## [1.0.12](https://github.com/big-unibo/predict/compare/1.0.11...1.0.12) (2024-10-21)
 
 ### Bug Fixes
