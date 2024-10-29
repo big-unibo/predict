@@ -1,3 +1,22 @@
+## [1.0.14](https://github.com/big-unibo/predict/compare/1.0.13...1.0.14) (2024-10-29)
+
+### Dependency updates
+
+* **deps:** update dependency pyarrow to v17 ([c1fbd6a](https://github.com/big-unibo/predict/commit/c1fbd6a4b73d79530871ad19f3853b04b4a5d806))
+* **deps:** update dependency pyarrow to v18 ([9f77e41](https://github.com/big-unibo/predict/commit/9f77e4124a96c4bbc4e5c1dd16aef164bb606850))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.112 ([69df508](https://github.com/big-unibo/predict/commit/69df508c7088bf5eae445dae8e58d0b07de46707))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.113 ([867f967](https://github.com/big-unibo/predict/commit/867f96781085754bcf96cb3a523334eb0b0987b0))
+
+### Bug Fixes
+
+* **deps:** update dependency com.fasterxml.jackson.dataformat:jackson-dataformat-yaml to v2.18.1 ([5ee6e0c](https://github.com/big-unibo/predict/commit/5ee6e0c1c1e3bc4bb5c0cd3bdb7658e10e02aa2d))
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v4.2.2 ([c77b49d](https://github.com/big-unibo/predict/commit/c77b49da9e81b3f6a4650412c379d161e30b0579))
+* **deps:** update actions/setup-java action to v4.5.0 ([4cf3e70](https://github.com/big-unibo/predict/commit/4cf3e70fef29e1c14df86a0db5066ec06d35a5ab))
+* **deps:** update actions/setup-node action to v4.1.0 ([c5cba6a](https://github.com/big-unibo/predict/commit/c5cba6a3eef47cc880e7f27db4fa02a62014ce80))
+
 ## [1.0.13](https://github.com/big-unibo/predict/compare/1.0.12...1.0.13) (2024-10-22)
 
 ### Dependency updates
