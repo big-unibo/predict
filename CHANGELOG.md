@@ -1,3 +1,16 @@
+## [1.0.16](https://github.com/big-unibo/predict/compare/1.0.15...1.0.16) (2024-11-21)
+
+### Dependency updates
+
+* **deps:** update dependency autots to v0.6.16 ([#55](https://github.com/big-unibo/predict/issues/55)) ([c6a2eb9](https://github.com/big-unibo/predict/commit/c6a2eb98cc0169dbbc511247126fec3caafc7e59))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.114 ([d33e8d3](https://github.com/big-unibo/predict/commit/d33e8d3aed73c3fd6f4cbc4b102051ebafb203df))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.115 ([#54](https://github.com/big-unibo/predict/issues/54)) ([c33498d](https://github.com/big-unibo/predict/commit/c33498d127148a376322a79246e552fadd46d331))
+* **deps:** update node.js to v22 ([24623f4](https://github.com/big-unibo/predict/commit/24623f4dcc4fc89d2c488feda625047c830d58d3))
+
+### Bug Fixes
+
+* **deps:** update dependency commons-io:commons-io to v2.18.0 ([#56](https://github.com/big-unibo/predict/issues/56)) ([395c4b7](https://github.com/big-unibo/predict/commit/395c4b72f5bb9ed60ead1a01ae040b1377694f71))
+
 ## [1.0.15](https://github.com/big-unibo/predict/compare/1.0.14...1.0.15) (2024-10-30)
 
 ### Bug Fixes
