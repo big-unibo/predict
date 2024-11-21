@@ -66,7 +66,7 @@ dependencies {
     antlr "org.antlr:antlr4:4.13.2"
     // servlet
     implementation 'javax:javaee-api:8.0.1'
-    implementation 'io.ktor:ktor-server-servlet:2.3.12'
+    implementation 'io.ktor:ktor-server-servlet:2.3.13'
     // kotlin
     implementation "com.github.holgerbrandl:krangl:0.18.4"
     implementation 'io.github.cdimascio:dotenv-kotlin:6.4.2'
