@@ -1,3 +1,9 @@
+## [1.0.17](https://github.com/big-unibo/predict/compare/1.0.16...1.0.17) (2024-11-22)
+
+### Bug Fixes
+
+* **deps:** update dependency io.ktor:ktor-server-servlet to v2.3.13 ([#57](https://github.com/big-unibo/predict/issues/57)) ([83973da](https://github.com/big-unibo/predict/commit/83973dadb7b13db53eb420f47a342cced94a1403))
+
 ## [1.0.16](https://github.com/big-unibo/predict/compare/1.0.15...1.0.16) (2024-11-21)
 
 ### Dependency updates
