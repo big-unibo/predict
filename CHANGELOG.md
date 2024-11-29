@@ -1,3 +1,13 @@
+## [1.0.18](https://github.com/big-unibo/predict/compare/1.0.17...1.0.18) (2024-11-29)
+
+### Dependency updates
+
+* **deps:** update dependency pyarrow to v18.1.0 ([#58](https://github.com/big-unibo/predict/issues/58)) ([6f8ab68](https://github.com/big-unibo/predict/commit/6f8ab68ba6dd0ee583b5793a5f3f4d14dc07a530))
+
+### Bug Fixes
+
+* **deps:** update dependency com.fasterxml.jackson.datatype:jackson-datatype-jsr310 to v2.18.2 ([#59](https://github.com/big-unibo/predict/issues/59)) ([2c4a1c6](https://github.com/big-unibo/predict/commit/2c4a1c6f715cc82f473338a5d9300e9a99382d4b))
+
 ## [1.0.17](https://github.com/big-unibo/predict/compare/1.0.16...1.0.17) (2024-11-22)
 
 ### Bug Fixes
