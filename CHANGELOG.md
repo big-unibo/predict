@@ -1,3 +1,18 @@
+## [1.0.20](https://github.com/big-unibo/predict/compare/1.0.19...1.0.20) (2024-12-12)
+
+### Dependency updates
+
+* **deps:** update dependency autots to v0.6.17 ([#65](https://github.com/big-unibo/predict/issues/65)) ([59715dd](https://github.com/big-unibo/predict/commit/59715dde267a1e4b59ffb8aff237db61acf4422e))
+* **deps:** update dependency notebook to v7.3.0 ([#62](https://github.com/big-unibo/predict/issues/62)) ([18e3c1a](https://github.com/big-unibo/predict/commit/18e3c1ad0876c47a0816153de4b42340a7bd277c))
+* **deps:** update dependency notebook to v7.3.1 ([#63](https://github.com/big-unibo/predict/issues/63)) ([4e8087e](https://github.com/big-unibo/predict/commit/4e8087e415a20b08f8d8c2afce98ed713d7d75f6))
+* **deps:** update dependency scikit-learn to v1.6.0 ([#66](https://github.com/big-unibo/predict/issues/66)) ([151bf5d](https://github.com/big-unibo/predict/commit/151bf5deab86bb76b50eb812cbc96e4d63d4b87f))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.116 ([#64](https://github.com/big-unibo/predict/issues/64)) ([64097ef](https://github.com/big-unibo/predict/commit/64097ef94c114eed7c791fb283b7b6ba40642a5a))
+* **deps:** update node.js to 22.12 ([#61](https://github.com/big-unibo/predict/issues/61)) ([f2257b1](https://github.com/big-unibo/predict/commit/f2257b184bdffe15acc536c7c6f1e30325793cb8))
+
+### Bug Fixes
+
+* **deps:** update dependency edu.stanford.nlp:stanford-corenlp to v4.5.8 ([#67](https://github.com/big-unibo/predict/issues/67)) ([f07b17f](https://github.com/big-unibo/predict/commit/f07b17fd916c4a6d9ad71aaad109dbe429762f27))
+
 ## [1.0.19](https://github.com/big-unibo/predict/compare/1.0.18...1.0.19) (2024-11-30)
 
 ### Bug Fixes
