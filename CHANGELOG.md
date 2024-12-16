@@ -1,3 +1,9 @@
+## [1.0.21](https://github.com/big-unibo/predict/compare/1.0.20...1.0.21) (2024-12-16)
+
+### Bug Fixes
+
+* **deps:** update dependency io.github.cdimascio:dotenv-kotlin to v6.5.0 ([#68](https://github.com/big-unibo/predict/issues/68)) ([44caaeb](https://github.com/big-unibo/predict/commit/44caaebaa04f13342849b365ca6ff22179ee7ac9))
+
 ## [1.0.20](https://github.com/big-unibo/predict/compare/1.0.19...1.0.20) (2024-12-12)
 
 ### Dependency updates
