@@ -1,3 +1,9 @@
+## [1.0.22](https://github.com/big-unibo/predict/compare/1.0.21...1.0.22) (2024-12-17)
+
+### Bug Fixes
+
+* **deps:** update junit5 monorepo to v5.11.4 ([#69](https://github.com/big-unibo/predict/issues/69)) ([e64b9d3](https://github.com/big-unibo/predict/commit/e64b9d3efc962493544d6e442a4c7cad62326e5e))
+
 ## [1.0.21](https://github.com/big-unibo/predict/compare/1.0.20...1.0.21) (2024-12-16)
 
 ### Bug Fixes
