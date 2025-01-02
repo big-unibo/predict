@@ -1,3 +1,18 @@
+## [1.0.24](https://github.com/big-unibo/predict/compare/1.0.23...1.0.24) (2025-01-02)
+
+### Dependency updates
+
+* **deps:** update dependency notebook to v7.3.2 ([#73](https://github.com/big-unibo/predict/issues/73)) ([9475335](https://github.com/big-unibo/predict/commit/9475335cabc878cccba4323f93d5612befb9a49f))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.117 ([#72](https://github.com/big-unibo/predict/issues/72)) ([5ee857d](https://github.com/big-unibo/predict/commit/5ee857d81dd6d83db35abcd0f6897b5ec6119560))
+
+### Bug Fixes
+
+* **deps:** update dependency org.json:json to v20241224 ([#74](https://github.com/big-unibo/predict/issues/74)) ([28a547c](https://github.com/big-unibo/predict/commit/28a547ce93077c758eace3c87929f0079db51be2))
+
+### Build and continuous integration
+
+* **deps:** update actions/setup-java action to v4.6.0 ([#71](https://github.com/big-unibo/predict/issues/71)) ([1b1ec16](https://github.com/big-unibo/predict/commit/1b1ec163315d4956d55da603781334be402b9f77))
+
 ## [1.0.23](https://github.com/big-unibo/predict/compare/1.0.22...1.0.23) (2024-12-17)
 
 ### Bug Fixes
