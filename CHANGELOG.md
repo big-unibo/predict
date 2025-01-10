@@ -1,3 +1,16 @@
+## [1.0.25](https://github.com/big-unibo/predict/compare/1.0.24...1.0.25) (2025-01-10)
+
+### Dependency updates
+
+* **deps:** update dependency scipy to v1.15.0 ([#75](https://github.com/big-unibo/predict/issues/75)) ([853365d](https://github.com/big-unibo/predict/commit/853365d8650042f872002eb48947cd39460d0513))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.118 ([#76](https://github.com/big-unibo/predict/issues/76)) ([a6c3651](https://github.com/big-unibo/predict/commit/a6c365153d3b993204779c9446c5f57e6800bd2e))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.119 ([#79](https://github.com/big-unibo/predict/issues/79)) ([123af21](https://github.com/big-unibo/predict/commit/123af213a57bdb5ef4a178734d9c4a3cd8f55fdf))
+* **deps:** update node.js to 22.13 ([#77](https://github.com/big-unibo/predict/issues/77)) ([e1d8302](https://github.com/big-unibo/predict/commit/e1d8302df4f5e9ec685a5d2f818e47c6bb578c04))
+
+### Bug Fixes
+
+* **deps:** update dependency org.json:json to v20250107 ([#78](https://github.com/big-unibo/predict/issues/78)) ([17f7c13](https://github.com/big-unibo/predict/commit/17f7c133fe40b11759c93386bf178df9a0ea31ba))
+
 ## [1.0.24](https://github.com/big-unibo/predict/compare/1.0.23...1.0.24) (2025-01-02)
 
 ### Dependency updates
