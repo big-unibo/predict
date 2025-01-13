@@ -1,3 +1,15 @@
+## [1.0.26](https://github.com/big-unibo/predict/compare/1.0.25...1.0.26) (2025-01-13)
+
+### Dependency updates
+
+* **deps:** update dependency scikit-learn to v1.6.1 ([#81](https://github.com/big-unibo/predict/issues/81)) ([d1c0d11](https://github.com/big-unibo/predict/commit/d1c0d116b93336ade5b95de60ce34470674349df))
+* **deps:** update dependency scipy to v1.15.1 ([#82](https://github.com/big-unibo/predict/issues/82)) ([80208f8](https://github.com/big-unibo/predict/commit/80208f8032c88d99ff3d44aa459a8250d1b8d6af))
+* **deps:** update dependency sqlalchemy to v2.0.37 ([#80](https://github.com/big-unibo/predict/issues/80)) ([70b43b9](https://github.com/big-unibo/predict/commit/70b43b9d8bb23ebc75908d0eb07e8624cbd9b3eb))
+
+### Bug Fixes
+
+* **deps:** update dependency org.apache.commons:commons-csv to v1.13.0 ([#83](https://github.com/big-unibo/predict/issues/83)) ([47131df](https://github.com/big-unibo/predict/commit/47131df4fd8079cb63caac9d8517b068df49ce9c))
+
 ## [1.0.25](https://github.com/big-unibo/predict/compare/1.0.24...1.0.25) (2025-01-10)
 
 ### Dependency updates
