@@ -11,7 +11,7 @@ scikit-learn-extra==0.3.0
 scipy==1.15.1
 SQLAlchemy==2.0.38
 yellowbrick==1.5
-autots==0.6.17
+autots==0.6.18
 prophet==1.1.6
 statsmodels==0.14.4
 python-dotenv==1.0.1
