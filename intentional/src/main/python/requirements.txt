@@ -8,7 +8,7 @@ pandas==1.5.3
 requests==2.32.3
 scikit-learn==1.6.1
 scikit-learn-extra==0.3.0
-scipy==1.15.1
+scipy==1.15.2
 SQLAlchemy==2.0.38
 yellowbrick==1.5
 autots==0.6.19
