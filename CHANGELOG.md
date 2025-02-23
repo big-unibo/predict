@@ -1,3 +1,30 @@
+## [1.0.28](https://github.com/big-unibo/predict/compare/1.0.27...1.0.28) (2025-02-23)
+
+### Dependency updates
+
+* **deps:** update dependency autopep8 to v2.3.2 ([#85](https://github.com/big-unibo/predict/issues/85)) ([b9ed939](https://github.com/big-unibo/predict/commit/b9ed939a9297c15b46660885c9f90708a98f6096))
+* **deps:** update dependency autots to v0.6.18 ([#95](https://github.com/big-unibo/predict/issues/95)) ([0da52fb](https://github.com/big-unibo/predict/commit/0da52fb9e095d8954cb5c1a5a51710935d0be934))
+* **deps:** update dependency autots to v0.6.19 ([#97](https://github.com/big-unibo/predict/issues/97)) ([b333aba](https://github.com/big-unibo/predict/commit/b333abaf2f292dfdf48916f2d95475d9e3f558de))
+* **deps:** update dependency pyarrow to v19 ([#86](https://github.com/big-unibo/predict/issues/86)) ([bf0279e](https://github.com/big-unibo/predict/commit/bf0279eaab29d2134c1fe07c36e0dfdcfac1f19a))
+* **deps:** update dependency pyarrow to v19.0.1 ([#101](https://github.com/big-unibo/predict/issues/101)) ([70f264b](https://github.com/big-unibo/predict/commit/70f264ba4467e22669314596f1a15eaba9a84c09))
+* **deps:** update dependency scipy to v1.15.2 ([#100](https://github.com/big-unibo/predict/issues/100)) ([ab424a1](https://github.com/big-unibo/predict/commit/ab424a1ecff31827eb2e60903f30cf9f0cf9059a))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.121 ([#92](https://github.com/big-unibo/predict/issues/92)) ([b148610](https://github.com/big-unibo/predict/commit/b148610ebaf517940eaa5faa723c70e49c885445))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.122 ([#93](https://github.com/big-unibo/predict/issues/93)) ([d24f391](https://github.com/big-unibo/predict/commit/d24f391001c8f8605cf45bc09b406d2e5aafdd7a))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.123 ([#98](https://github.com/big-unibo/predict/issues/98)) ([8343a26](https://github.com/big-unibo/predict/commit/8343a261ef7ac94a52f5b809e9f33d263d9b2a64))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.124 ([#99](https://github.com/big-unibo/predict/issues/99)) ([b85fcc1](https://github.com/big-unibo/predict/commit/b85fcc126ddb69d4ee8be9babd646d02a1689a04))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.125 ([#102](https://github.com/big-unibo/predict/issues/102)) ([23dfabd](https://github.com/big-unibo/predict/commit/23dfabdc2a759c2d17be4bb9bef0bc2a9d2f1d3a))
+* **deps:** update dependency sqlalchemy to v2.0.38 ([#94](https://github.com/big-unibo/predict/issues/94)) ([985ee08](https://github.com/big-unibo/predict/commit/985ee08e25c06b853b84a10ccadb647549834024))
+* **deps:** update node.js to 22.14 ([#96](https://github.com/big-unibo/predict/issues/96)) ([d8a5d4f](https://github.com/big-unibo/predict/commit/d8a5d4f9790c8a48e2d985f4befc772a0d2c7b4c))
+
+### Bug Fixes
+
+* **deps:** update dependency io.github.cdimascio:dotenv-kotlin to v6.5.1 ([#104](https://github.com/big-unibo/predict/issues/104)) ([b67d007](https://github.com/big-unibo/predict/commit/b67d007115d5da0d64275b87f6158beb25a9a1a4))
+
+### Build and continuous integration
+
+* **deps:** update actions/setup-java action to v4.7.0 ([#91](https://github.com/big-unibo/predict/issues/91)) ([4516c5d](https://github.com/big-unibo/predict/commit/4516c5dda018c85c1936fd6fbc371dce16a1ba3b))
+* **deps:** update actions/setup-node action to v4.2.0 ([#87](https://github.com/big-unibo/predict/issues/87)) ([a24090e](https://github.com/big-unibo/predict/commit/a24090e7aee597f30d38db3aac9a9787318c069a))
+
 ## [1.0.27](https://github.com/big-unibo/predict/compare/1.0.26...1.0.27) (2025-01-13)
 
 ### Bug Fixes
