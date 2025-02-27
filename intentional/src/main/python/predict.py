@@ -34,7 +34,6 @@ from matplotlib.dates import DateFormatter
 
 # Additional libraries
 from minepy import cstats
-from autots import AutoTS, load_daily
 
 # Suppress warnings
 warnings.filterwarnings('ignore')
@@ -222,6 +221,7 @@ def timeseries(df, date_attr, column, target_measure, model, figtitle="dt", test
         plot(fig, axs, cdf, date_attr, c, y, X_train, y_train, X_test, y_test, y_pred, missing_values_df, value, i, figtitle)
         i += 2
         save(fig, figtitle, c)
+
     return melt(df, date_attr, column, target_measure), P
 
 
@@ -451,7 +451,6 @@ def predict(df, by, target_measure, using=models, nullify_last=None, execution_i
                 ], ignore_index=True)
             stats.append([execution_id, model, end_time])
             print(f"{model}. R2={value}")
-
     return P, stats
 
 if __name__ == '__main__':
@@ -493,12 +492,19 @@ if __name__ == '__main__':
     X = X.dropna(axis=1, how='all')
     X.columns = [x.lower() for x in X.columns]
     by = [x.lower() for x in cube["GC"]]
+    # Drop rows with any NaN values in target measures
+    X = X.dropna(subset=list(set(X.columns) - set(by) - set([measure])), how='any')
     using = models if len(using) == 0 else using
     # Set a seed for reproducibility
     np.random.seed(0)
     # Define the indices to replace with random values
     if nullify > 0:
-        key = "hour" if "hour" in X.columns else "week"
+        def first_match(B={"hour", "week", "date", "month"}):
+            for a in X.columns:
+                if any(b in a for b in B):
+                    return a
+            return by[0]
+        key = first_match()
         # Get the last distinct values
         nullable_values = X[key].drop_duplicates(keep='last').tail(int(X[key].nunique() * nullify / 100))
         X.loc[X[key].isin(nullable_values), measure] = np.nan

@@ -87,6 +87,26 @@ class TestPredict {
     }
 
     @Test
+    fun `test foodmart 1`() {
+        execute("with ft_salpurch predict netrevenue by the_date for the_year=1997 nullify 5")
+    }
+
+    @Test
+    fun `test foodmart 2`() {
+        execute("with ft_salpurch predict netrevenue by product_subcategory for the_year=1997 nullify 5")
+    }
+
+    @Test
+    fun `test foodmart 3`() {
+        execute("with ft_salpurch predict avg(unitprice) as unitprice by the_date from avg(unitcost) nullify 5")
+    }
+
+    @Test
+    fun `test foodmart 4`() {
+        execute("with ft_sales predict discount by the_date nullify 5")
+    }
+
+    @Test
     fun `test watering`() {
         Intention.DEBUG = false
         val sensors = listOf(
