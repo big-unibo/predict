@@ -358,6 +358,7 @@ def multi_timeseries(df, date_attr, column, target_measure, model, figtitle, tes
     P = pd.DataFrame([
             ['multivariateTS', 'ALL', value, (len(missing_values_df) / len(df)) if missing_values_df is not None else -1, len(targets), len(df.columns) - 1 - len(targets), round((time.time() - start) * 1000), success, success_time, accuracy],  # -1 is for the data_attr column
         ], columns=["model", "component", "interest", "sparsity", "endog", "exog", "component_time", "success", "success_time", "accuracy"])
+
     for c in targets:
         if missing_values_df is not None:
             plot(fig, axs, df, date_attr, c, Y[c], X_train, Y_train[c], X_test, Y_test[c], Y_pred[c], missing_values_df, value, i, figtitle)
@@ -506,7 +507,7 @@ if __name__ == '__main__':
             return by[0]
         key = first_match()
         # Get the last distinct values
-        nullable_values = X[key].drop_duplicates(keep='last').tail(int(X[key].nunique() * nullify / 100))
+        nullable_values = X[key].drop_duplicates(keep='last').tail(max(1, int(X[key].nunique() * nullify / 100)))
         X.loc[X[key].isin(nullable_values), measure] = np.nan
     # write stats
     file_path = my_path + "../predict_intentions.csv"

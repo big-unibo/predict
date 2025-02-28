@@ -68,42 +68,50 @@ class TestPredict {
 
     @Test
     fun `test cimice 4`() {
+        Intention.DEBUG = false
         execute("with CIMICE predict adults for month between ['2021-05', '2021-09'] and province in ('BO', 'RA') by week, province from small_instars, total_captures executionid Cimice-114-Test4")
     }
 
     @Test
     fun `test cimice 3`() {
+        Intention.DEBUG = false
         execute("with CIMICE predict adults for month between ['2021-05', '2021-09'] by week, province from small_instars, total_captures")
     }
 
     @Test
     fun `test cimice2`() {
+        Intention.DEBUG = false
         execute("with CIMICE predict adults for month between ['2021-05', '2021-09'] by week from small_instars, total_captures executionid Cimice-113-Test2")
     }
 
     @Test
     fun `test cimice 1`() {
+        Intention.DEBUG = false
         execute("with CIMICE predict adults by week")
     }
 
     @Test
     fun `test foodmart 1`() {
-        execute("with ft_salpurch predict netrevenue by the_date for the_year=1997 nullify 5")
+        Intention.DEBUG = false
+        execute("with ft_salpurch predict netrevenue by the_date for the_year=1997 nullify 5 executionid Foodmart-1")
     }
 
     @Test
     fun `test foodmart 2`() {
-        execute("with ft_salpurch predict netrevenue by product_subcategory for the_year=1997 nullify 5")
+        Intention.DEBUG = false
+        execute("with ft_salpurch predict netrevenue by product_subcategory for the_year=1997 nullify 5 executionid Foodmart-2")
     }
 
     @Test
     fun `test foodmart 3`() {
-        execute("with ft_salpurch predict avg(unitprice) as unitprice by the_date from avg(unitcost) nullify 5")
+        Intention.DEBUG = false
+        execute("with ft_salpurch predict avg(unitprice) as unitprice by the_date from avg(unitcost) nullify 5 executionid Foodmart-3")
     }
 
     @Test
     fun `test foodmart 4`() {
-        execute("with ft_sales predict discount by the_date nullify 5")
+        Intention.DEBUG = false
+        execute("with ft_sales predict discount by the_date nullify 5 executionid Foodmart-4")
     }
 
     @Test
@@ -160,10 +168,11 @@ class TestPredict {
 
     @Test
     fun `test models 2`() {
-        execute("with sales_fact_1997 predict unit_sales by the_date using univariateTS")
-        // execute("with sales_fact_1997 predict unit_sales by the_month using multivariateTS")
-        execute("with sales_fact_1997 predict unit_sales by the_month using timeDecisionTree")
-        execute("with sales_fact_1997 predict unit_sales by the_month using timeRandomForest, univariateTS")
+        execute("with sales_fact_1997 predict unit_sales by the_date using randomForest")
+        execute("with sales_fact_1997 predict unit_sales by the_date using univariateTS nullify 5")
+        // execute("with sales_fact_1997 predict unit_sales by the_month using multivariateTS nullify 5")
+        execute("with sales_fact_1997 predict unit_sales by the_month using timeDecisionTree nullify 5")
+        execute("with sales_fact_1997 predict unit_sales by the_month using timeRandomForest, univariateTS nullify 5")
     }
 
 //    @Test
