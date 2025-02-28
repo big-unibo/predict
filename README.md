@@ -4,7 +4,7 @@
 
 ## Research papers
 
-This repository implements the paper "Predicting Multidimensional Cubes Through Intentional Analytics" submitted to the IEEE TKDE journal.
+This repository implements the paper "Predicting Multidimensional Cubes Through Intentional Analytics".
 
 ## Running the tests
 
