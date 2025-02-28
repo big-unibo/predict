@@ -286,8 +286,8 @@ class TestDescribeK {
     }
 
     fun equals(c: DataFrame, cube: DataFrame) {
-        c.names.forEach {
-            if (c[it].values().get(0).toString().toDoubleOrNull() == null) {
+        c.names.forEach { it ->
+            if (c[it].values()[0].toString().toDoubleOrNull() == null) {
                 assertEquals(c[it], cube[it], it)
             } else {
                 assertEquals(c[it].map<Double> { 1.0 * (it * 1000).roundToInt() / 1000.0 }, cube[it].map<Double> { 1.0 * (it * 1000).roundToInt() / 1000.0 }, it)
