@@ -1,3 +1,10 @@
+## [1.0.30](https://github.com/big-unibo/predict/compare/1.0.29...1.0.30) (2025-03-01)
+
+### Bug Fixes
+
+* add tests on foodmart [#106](https://github.com/big-unibo/predict/issues/106) ([6b685c6](https://github.com/big-unibo/predict/commit/6b685c64700b2726bfb5ae63dd5eb63213f18831))
+* **deps:** update dependency com.fasterxml.jackson.dataformat:jackson-dataformat-yaml to v2.18.3 ([#107](https://github.com/big-unibo/predict/issues/107)) ([f0dc51e](https://github.com/big-unibo/predict/commit/f0dc51e00c87276f8a5378a5e19c6e2b35913e54))
+
 ## [1.0.29](https://github.com/big-unibo/predict/compare/1.0.28...1.0.29) (2025-02-26)
 
 ### Bug Fixes
