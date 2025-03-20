@@ -1,3 +1,20 @@
+## [1.0.32](https://github.com/big-unibo/predict/compare/1.0.31...1.0.32) (2025-03-20)
+
+### Dependency updates
+
+* **deps:** update dependency autots to v0.6.20 ([#109](https://github.com/big-unibo/predict/issues/109)) ([fddae43](https://github.com/big-unibo/predict/commit/fddae4313521bc9d3972b40cb27fef1bbecb26e9))
+* **deps:** update dependency autots to v0.6.21 ([#111](https://github.com/big-unibo/predict/issues/111)) ([6fea8cc](https://github.com/big-unibo/predict/commit/6fea8cc9cec397a937c0c9cec2111ce60c699b4f))
+* **deps:** update dependency notebook to v7.3.3 ([#114](https://github.com/big-unibo/predict/issues/114)) ([e7c2b2b](https://github.com/big-unibo/predict/commit/e7c2b2b57b21b091332620543412ba58169c5604))
+* **deps:** update dependency sqlalchemy to v2.0.39 ([#112](https://github.com/big-unibo/predict/issues/112)) ([ef442a2](https://github.com/big-unibo/predict/commit/ef442a278b0602897831759fab95986064c19dcb))
+
+### Bug Fixes
+
+* **deps:** update dependency com.google.guava:guava to v33.4.5-jre ([#116](https://github.com/big-unibo/predict/issues/116)) ([f3d2e7d](https://github.com/big-unibo/predict/commit/f3d2e7d96bd6b527ea776a47c0cbd0470230129b))
+
+### Build and continuous integration
+
+* **deps:** update actions/setup-node action to v4.3.0 ([#115](https://github.com/big-unibo/predict/issues/115)) ([358f774](https://github.com/big-unibo/predict/commit/358f774b531c3236b612cbbabaf3727986ba0cd4))
+
 ## [1.0.31](https://github.com/big-unibo/predict/compare/1.0.30...1.0.31) (2025-03-02)
 
 ### Bug Fixes
