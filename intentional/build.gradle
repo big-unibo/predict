@@ -74,7 +74,7 @@ dependencies {
     // java
     implementation 'mysql:mysql-connector-java:8.0.33'
     implementation 'com.github.doyaaaaaken:kotlin-csv-jvm:1.10.0'
-    implementation 'org.apache.commons:commons-csv:1.13.0'
+    implementation 'org.apache.commons:commons-csv:1.14.0'
     implementation 'org.jgrapht:jgrapht-core:1.5.2'
     implementation 'edu.stanford.nlp:stanford-corenlp:4.5.8'
     implementation 'org.apache.commons:commons-lang3:3.17.0'
