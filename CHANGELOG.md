@@ -1,3 +1,13 @@
+## [1.0.35](https://github.com/big-unibo/predict/compare/1.0.34...1.0.35) (2025-03-26)
+
+### Dependency updates
+
+* **deps:** update dependency python-dotenv to v1.1.0 ([#122](https://github.com/big-unibo/predict/issues/122)) ([83eb95d](https://github.com/big-unibo/predict/commit/83eb95d4f678c5fdbcd08f33fe20f262abf9442c))
+
+### Bug Fixes
+
+* **deps:** update dependency com.google.guava:guava to v33.4.6-jre ([#123](https://github.com/big-unibo/predict/issues/123)) ([93d9e38](https://github.com/big-unibo/predict/commit/93d9e38bc09a365e32fe296d27d5cee1bd6ff744))
+
 ## [1.0.34](https://github.com/big-unibo/predict/compare/1.0.33...1.0.34) (2025-03-24)
 
 ### Bug Fixes
