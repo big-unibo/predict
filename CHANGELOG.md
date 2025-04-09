@@ -1,3 +1,13 @@
+## [1.0.36](https://github.com/big-unibo/predict/compare/1.0.35...1.0.36) (2025-04-09)
+
+### Dependency updates
+
+* **deps:** update dependency sqlalchemy to v2.0.40 ([#124](https://github.com/big-unibo/predict/issues/124)) ([0bc0faf](https://github.com/big-unibo/predict/commit/0bc0fafb887b103f6edc69f493953e7e91483140))
+
+### Bug Fixes
+
+* **deps:** update dependency com.google.guava:guava to v33.4.7-android ([#125](https://github.com/big-unibo/predict/issues/125)) ([1532668](https://github.com/big-unibo/predict/commit/1532668f83ebba061be9baee59475e360f8cb47a))
+
 ## [1.0.35](https://github.com/big-unibo/predict/compare/1.0.34...1.0.35) (2025-03-26)
 
 ### Dependency updates
