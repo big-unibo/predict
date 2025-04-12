@@ -1,3 +1,13 @@
+## [1.0.38](https://github.com/big-unibo/predict/compare/1.0.37...1.0.38) (2025-04-12)
+
+### Dependency updates
+
+* **deps:** update dependency notebook to v7.4.0 ([#128](https://github.com/big-unibo/predict/issues/128)) ([970a05d](https://github.com/big-unibo/predict/commit/970a05d600c7f90a61211a887ced96ff274f8350))
+
+### Bug Fixes
+
+* **deps:** update dependency commons-io:commons-io to v2.19.0 ([#129](https://github.com/big-unibo/predict/issues/129)) ([6cc997c](https://github.com/big-unibo/predict/commit/6cc997c6b41946ea5769facf0984153b5b1f884d))
+
 ## [1.0.37](https://github.com/big-unibo/predict/compare/1.0.36...1.0.37) (2025-04-10)
 
 ### Bug Fixes
