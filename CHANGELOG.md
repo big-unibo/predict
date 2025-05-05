@@ -1,3 +1,14 @@
+## [1.0.42](https://github.com/big-unibo/predict/compare/1.0.41...1.0.42) (2025-05-05)
+
+### Dependency updates
+
+* **deps:** update dependency pyarrow to v20 ([#137](https://github.com/big-unibo/predict/issues/137)) ([43dc054](https://github.com/big-unibo/predict/commit/43dc05426fa73ecc471e09f8ea29d6507a0bfb50))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.127 ([#138](https://github.com/big-unibo/predict/issues/138)) ([fdaa277](https://github.com/big-unibo/predict/commit/fdaa2773abe7bee8ecdddfa8dcb5045f45dcb1f6))
+
+### Bug Fixes
+
+* **deps:** update dependency com.opencsv:opencsv to v5.11 ([#139](https://github.com/big-unibo/predict/issues/139)) ([ad87a9f](https://github.com/big-unibo/predict/commit/ad87a9f798d5e1705768ff2b5ed3bbc1a38b0cd4))
+
 ## [1.0.41](https://github.com/big-unibo/predict/compare/1.0.40...1.0.41) (2025-04-26)
 
 ### Bug Fixes
