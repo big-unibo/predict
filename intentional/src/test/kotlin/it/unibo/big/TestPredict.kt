@@ -42,9 +42,9 @@ class TestPredict {
     @Test
     fun `test cimice 7`() {
         Intention.DEBUG = false
-        val measures = listOf("adults", "cum_degree_days")
+        val measures = listOf("adults", "cum_degree_days", "temperature")
         measures.forEachIndexed { i, _ ->
-            execute("with CIMICE predict adults for province in ('BO') by week, province from ${measures.subList(0, i + 1).reduce { a, b -> "$a, $b" }} accuracysize 20 executionid Cimice-200-$i")
+            execute("with CIMICE predict adults for province in ('BO') by week, province from ${measures.subList(0, i + 1).reduce { a, b -> "$a, $b" }} nullify 2 accuracysize 20 executionid Cimice-200-$i")
         }
     }
 
