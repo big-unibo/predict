@@ -1,3 +1,16 @@
+## [1.0.44](https://github.com/big-unibo/predict/compare/1.0.43...1.0.44) (2025-06-02)
+
+### Dependency updates
+
+* **deps:** update dependency notebook to v7.4.3 ([#147](https://github.com/big-unibo/predict/issues/147)) ([d04eb0d](https://github.com/big-unibo/predict/commit/d04eb0d703670b0613d83de89c0cac11cf2da124))
+* **deps:** update dependency prophet to v1.1.7 ([#150](https://github.com/big-unibo/predict/issues/150)) ([eb581c7](https://github.com/big-unibo/predict/commit/eb581c71db817325c7225f7d28a60419e82743e7))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.132 ([#148](https://github.com/big-unibo/predict/issues/148)) ([d4c1956](https://github.com/big-unibo/predict/commit/d4c19565fbfa04f67f1715a053bd91375f43291c))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.133 ([#149](https://github.com/big-unibo/predict/issues/149)) ([00d0261](https://github.com/big-unibo/predict/commit/00d02617e2d9273c073c9d0eae7722700d225d11))
+
+### Bug Fixes
+
+* **deps:** update dependency com.opencsv:opencsv to v5.11.1 ([#151](https://github.com/big-unibo/predict/issues/151)) ([9dde58f](https://github.com/big-unibo/predict/commit/9dde58fa0cc9f69202f6c20731d96178cd47f0f0))
+
 ## [1.0.43](https://github.com/big-unibo/predict/compare/1.0.42...1.0.43) (2025-05-26)
 
 ### Dependency updates
