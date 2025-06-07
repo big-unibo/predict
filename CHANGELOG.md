@@ -1,3 +1,14 @@
+## [1.0.45](https://github.com/big-unibo/predict/compare/1.0.44...1.0.45) (2025-06-07)
+
+### Dependency updates
+
+* **deps:** update dependency gradle to v7.6.5 ([#152](https://github.com/big-unibo/predict/issues/152)) ([3d0c5d7](https://github.com/big-unibo/predict/commit/3d0c5d776edd8bebb17c3147dfcad9ca1aab5c40))
+* **deps:** update dependency scikit-learn to v1.7.0 ([#153](https://github.com/big-unibo/predict/issues/153)) ([ea6d314](https://github.com/big-unibo/predict/commit/ea6d314342da1a6a312bebabcb3d55aa36b93da9))
+
+### Bug Fixes
+
+* **deps:** update dependency edu.stanford.nlp:stanford-corenlp to v4.5.10 ([#154](https://github.com/big-unibo/predict/issues/154)) ([f64fe67](https://github.com/big-unibo/predict/commit/f64fe676891c2eb38298c71633d2a71d8e7e0da8))
+
 ## [1.0.44](https://github.com/big-unibo/predict/compare/1.0.43...1.0.44) (2025-06-02)
 
 ### Dependency updates
