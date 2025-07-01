@@ -1,0 +1,1023 @@
+cardinality,execution_id,executionplan,intention,intention_characters,query_bytes,query_characters,query_cost,query_rows,time_model,time_query
+12,310c2a1d-244f-4b77-bbb8-2bc0385c5c93,"Plan hash value: 1148224997
+
+---------------------------------------------------------------------------------------
+| Id  | Operation           | Name            | Rows  | Bytes | Cost (%CPU)| Time     |
+---------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT    |                 |    24 |   696 |   138   (8)| 00:00:02 |
+|   1 |  SORT GROUP BY      |                 |    24 |   696 |   138   (8)| 00:00:02 |
+|*  2 |   HASH JOIN         |                 | 86835 |  2459K|   131   (4)| 00:00:02 |
+|   3 |    TABLE ACCESS FULL| TIME_BY_DAY     |   730 |  8760 |     4   (0)| 00:00:01 |
+|   4 |    TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  1441K|   126   (3)| 00:00:02 |
+---------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""TIME_BY_DAY"".""TIME_ID""=""FT"".""TIME_ID"")
+","with sales explain unit_sales by the_month against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",116,696.0,268.0,138.0,24.0,884,30
+36,e792d730-24a9-43c7-813e-738fecb1e2a5,"Plan hash value: 165028050
+
+----------------------------------------------------------------------------------------
+| Id  | Operation            | Name            | Rows  | Bytes | Cost (%CPU)| Time     |
+----------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT     |                 |    51 |  2244 |   147   (9)| 00:00:02 |
+|   1 |  SORT GROUP BY       |                 |    51 |  2244 |   147   (9)| 00:00:02 |
+|*  2 |   HASH JOIN          |                 | 86835 |  3731K|   140   (4)| 00:00:02 |
+|   3 |    TABLE ACCESS FULL | PRODUCT         |  1560 | 17160 |     8   (0)| 00:00:01 |
+|*  4 |    HASH JOIN         |                 | 86835 |  2798K|   131   (4)| 00:00:02 |
+|   5 |     TABLE ACCESS FULL| TIME_BY_DAY     |   730 |  8760 |     4   (0)| 00:00:01 |
+|   6 |     TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  1780K|   126   (3)| 00:00:02 |
+----------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""PRODUCT"".""PRODUCT_ID""=""FT"".""PRODUCT_ID"")
+4 - access(""TIME_BY_DAY"".""TIME_ID""=""FT"".""TIME_ID"")
+","with sales explain unit_sales by product_family, the_month against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",132,2244.0,397.0,147.0,51.0,873,39
+323,c39b58dd-ab15-4ecd-a4cf-d0c5c6bd3248,"Plan hash value: 1148224997
+
+---------------------------------------------------------------------------------------
+| Id  | Operation           | Name            | Rows  | Bytes | Cost (%CPU)| Time     |
+---------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT    |                 |   730 | 21170 |   138   (8)| 00:00:02 |
+|   1 |  SORT GROUP BY      |                 |   730 | 21170 |   138   (8)| 00:00:02 |
+|*  2 |   HASH JOIN         |                 | 86835 |  2459K|   131   (4)| 00:00:02 |
+|   3 |    TABLE ACCESS FULL| TIME_BY_DAY     |   730 |  8760 |     4   (0)| 00:00:01 |
+|   4 |    TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  1441K|   126   (3)| 00:00:02 |
+---------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""TIME_BY_DAY"".""TIME_ID""=""FT"".""TIME_ID"")
+","with sales explain unit_sales by the_date against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",115,21170.0,265.0,138.0,730.0,884,37
+540,07905661-c07a-4f86-ab29-15336cb4efa3,"Plan hash value: 165028050
+
+----------------------------------------------------------------------------------------
+| Id  | Operation            | Name            | Rows  | Bytes | Cost (%CPU)| Time     |
+----------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT     |                 |   764 | 37436 |   147   (9)| 00:00:02 |
+|   1 |  SORT GROUP BY       |                 |   764 | 37436 |   147   (9)| 00:00:02 |
+|*  2 |   HASH JOIN          |                 | 86835 |  4155K|   140   (4)| 00:00:02 |
+|   3 |    TABLE ACCESS FULL | PRODUCT         |  1560 | 24960 |     8   (0)| 00:00:01 |
+|*  4 |    HASH JOIN         |                 | 86835 |  2798K|   131   (4)| 00:00:02 |
+|   5 |     TABLE ACCESS FULL| TIME_BY_DAY     |   730 |  8760 |     4   (0)| 00:00:01 |
+|   6 |     TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  1780K|   126   (3)| 00:00:02 |
+----------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""PRODUCT"".""PRODUCT_ID""=""FT"".""PRODUCT_ID"")
+4 - access(""TIME_BY_DAY"".""TIME_ID""=""FT"".""TIME_ID"")
+","with sales explain unit_sales by product_category, the_month against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",134,37436.0,403.0,147.0,764.0,903,51
+1224,fce1588e-70f7-49c9-844f-1e1d5af49c06,"Plan hash value: 165028050
+
+----------------------------------------------------------------------------------------
+| Id  | Operation            | Name            | Rows  | Bytes | Cost (%CPU)| Time     |
+----------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT     |                 |  1731 | 83088 |   147   (9)| 00:00:02 |
+|   1 |  SORT GROUP BY       |                 |  1731 | 83088 |   147   (9)| 00:00:02 |
+|*  2 |   HASH JOIN          |                 | 86835 |  4070K|   140   (4)| 00:00:02 |
+|   3 |    TABLE ACCESS FULL | PRODUCT         |  1560 | 23400 |     8   (0)| 00:00:01 |
+|*  4 |    HASH JOIN         |                 | 86835 |  2798K|   131   (4)| 00:00:02 |
+|   5 |     TABLE ACCESS FULL| TIME_BY_DAY     |   730 |  8760 |     4   (0)| 00:00:01 |
+|   6 |     TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  1780K|   126   (3)| 00:00:02 |
+----------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""PRODUCT"".""PRODUCT_ID""=""FT"".""PRODUCT_ID"")
+4 - access(""TIME_BY_DAY"".""TIME_ID""=""FT"".""TIME_ID"")
+","with sales explain unit_sales by product_subcategory, the_month against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",137,83088.0,412.0,147.0,1731.0,986,61
+12113,2a644b65-9296-4017-8ca9-68e61df9ca2c,"Plan hash value: 251198219
+
+--------------------------------------------------------------------------------------------------
+| Id  | Operation              | Name            | Rows  | Bytes |TempSpc| Cost (%CPU)| Time     |
+--------------------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT       |                 | 10278 |   672K|       |   674   (3)| 00:00:09 |
+|   1 |  SORT GROUP BY         |                 | 10278 |   672K|   856K|   674   (3)| 00:00:09 |
+|*  2 |   HASH JOIN            |                 | 10278 |   672K|       |   508   (3)| 00:00:07 |
+|   3 |    TABLE ACCESS FULL   | TIME_BY_DAY     |   730 |  8760 |       |     4   (0)| 00:00:01 |
+|   4 |    VIEW                | VW_GBC_9        | 10278 |   552K|       |   503   (3)| 00:00:07 |
+|   5 |     HASH GROUP BY      |                 | 10278 |   371K|  4440K|   503   (3)| 00:00:07 |
+|*  6 |      HASH JOIN         |                 | 86835 |  3137K|       |   135   (3)| 00:00:02 |
+|   7 |       TABLE ACCESS FULL| PRODUCT         |  1560 | 24960 |       |     8   (0)| 00:00:01 |
+|   8 |       TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  1780K|       |   126   (3)| 00:00:02 |
+--------------------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""TIME_BY_DAY"".""TIME_ID""=""ITEM_1"")
+6 - access(""PRODUCT"".""PRODUCT_ID""=""FT"".""PRODUCT_ID"")
+","with sales explain unit_sales by product_category, the_date against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",133,672000.0,400.0,674.0,10278.0,1000,60
+16949,317aae3e-d725-4fab-bc34-20f2673e6178,"Plan hash value: 1148224997
+
+-----------------------------------------------------------------------------------------------
+| Id  | Operation           | Name            | Rows  | Bytes |TempSpc| Cost (%CPU)| Time     |
+-----------------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT    |                 | 86835 |  2883K|       |   928   (2)| 00:00:12 |
+|   1 |  SORT GROUP BY      |                 | 86835 |  2883K|  4096K|   928   (2)| 00:00:12 |
+|*  2 |   HASH JOIN         |                 | 86835 |  2883K|       |   131   (4)| 00:00:02 |
+|   3 |    TABLE ACCESS FULL| TIME_BY_DAY     |   730 |  8760 |       |     4   (0)| 00:00:01 |
+|   4 |    TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  1865K|       |   126   (3)| 00:00:02 |
+-----------------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""TIME_BY_DAY"".""TIME_ID""=""FT"".""TIME_ID"")
+","with sales explain unit_sales by customer_id, the_month against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",129,2883000.0,395.0,928.0,86835.0,938,68
+18492,539903b1-66ce-4d92-a19f-7fe85631d72c,"Plan hash value: 1148224997
+
+-----------------------------------------------------------------------------------------------
+| Id  | Operation           | Name            | Rows  | Bytes |TempSpc| Cost (%CPU)| Time     |
+-----------------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT    |                 | 26458 |   852K|       |   563   (2)| 00:00:07 |
+|   1 |  SORT GROUP BY      |                 | 26458 |   852K|  4096K|   563   (2)| 00:00:07 |
+|*  2 |   HASH JOIN         |                 | 86835 |  2798K|       |   131   (4)| 00:00:02 |
+|   3 |    TABLE ACCESS FULL| TIME_BY_DAY     |   730 |  8760 |       |     4   (0)| 00:00:01 |
+|   4 |    TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  1780K|       |   126   (3)| 00:00:02 |
+-----------------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""TIME_BY_DAY"".""TIME_ID""=""FT"".""TIME_ID"")
+","with sales explain unit_sales by product_id, the_month against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",128,852000.0,385.0,563.0,26458.0,945,65
+20525,e9a509b2-141b-4a0c-8301-2bdad508f03f,"Plan hash value: 1148224997
+
+-----------------------------------------------------------------------------------------------
+| Id  | Operation           | Name            | Rows  | Bytes |TempSpc| Cost (%CPU)| Time     |
+-----------------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT    |                 | 86835 |  2883K|       |   928   (2)| 00:00:12 |
+|   1 |  SORT GROUP BY      |                 | 86835 |  2883K|  4096K|   928   (2)| 00:00:12 |
+|*  2 |   HASH JOIN         |                 | 86835 |  2883K|       |   131   (4)| 00:00:02 |
+|   3 |    TABLE ACCESS FULL| TIME_BY_DAY     |   730 |  8760 |       |     4   (0)| 00:00:01 |
+|   4 |    TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  1865K|       |   126   (3)| 00:00:02 |
+-----------------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""TIME_BY_DAY"".""TIME_ID""=""FT"".""TIME_ID"")
+","with sales explain unit_sales by customer_id, the_date against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",128,2883000.0,392.0,928.0,86835.0,956,70
+77832,744d86c2-e980-4943-8cf3-15c526ecf0ea,"Plan hash value: 1148224997
+
+-----------------------------------------------------------------------------------------------
+| Id  | Operation           | Name            | Rows  | Bytes |TempSpc| Cost (%CPU)| Time     |
+-----------------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT    |                 | 86835 |  2798K|       |   911   (2)| 00:00:11 |
+|   1 |  SORT GROUP BY      |                 | 86835 |  2798K|  4096K|   911   (2)| 00:00:11 |
+|*  2 |   HASH JOIN         |                 | 86835 |  2798K|       |   131   (4)| 00:00:02 |
+|   3 |    TABLE ACCESS FULL| TIME_BY_DAY     |   730 |  8760 |       |     4   (0)| 00:00:01 |
+|   4 |    TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  1780K|       |   126   (3)| 00:00:02 |
+-----------------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""TIME_BY_DAY"".""TIME_ID""=""FT"".""TIME_ID"")
+","with sales explain unit_sales by product_id, the_date against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",127,2798000.0,382.0,911.0,86835.0,1045,88
+86832,8cceb9d8-1e3c-40d1-8e89-e81f4a78a85d,"Plan hash value: 1148224997
+
+-----------------------------------------------------------------------------------------------
+| Id  | Operation           | Name            | Rows  | Bytes |TempSpc| Cost (%CPU)| Time     |
+-----------------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT    |                 | 86835 |  3222K|       |   994   (2)| 00:00:12 |
+|   1 |  SORT GROUP BY      |                 | 86835 |  3222K|  4800K|   994   (2)| 00:00:12 |
+|*  2 |   HASH JOIN         |                 | 86835 |  3222K|       |   131   (4)| 00:00:02 |
+|   3 |    TABLE ACCESS FULL| TIME_BY_DAY     |   730 |  8760 |       |     4   (0)| 00:00:01 |
+|   4 |    TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  2204K|       |   126   (3)| 00:00:02 |
+-----------------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""TIME_BY_DAY"".""TIME_ID""=""FT"".""TIME_ID"")
+","with sales explain unit_sales by customer_id, product_id, the_date against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",140,3222000.0,509.0,994.0,86835.0,1061,100
+12,d8912ea1-fd3e-46fa-bece-1a27ff4e98a5,"Plan hash value: 1148224997
+
+---------------------------------------------------------------------------------------
+| Id  | Operation           | Name            | Rows  | Bytes | Cost (%CPU)| Time     |
+---------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT    |                 |    24 |   696 |   138   (8)| 00:00:02 |
+|   1 |  SORT GROUP BY      |                 |    24 |   696 |   138   (8)| 00:00:02 |
+|*  2 |   HASH JOIN         |                 | 86835 |  2459K|   131   (4)| 00:00:02 |
+|   3 |    TABLE ACCESS FULL| TIME_BY_DAY     |   730 |  8760 |     4   (0)| 00:00:01 |
+|   4 |    TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  1441K|   126   (3)| 00:00:02 |
+---------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""TIME_BY_DAY"".""TIME_ID""=""FT"".""TIME_ID"")
+","with sales explain unit_sales by the_month against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",116,696.0,268.0,138.0,24.0,882,26
+36,fa2c41f6-a004-4c4a-9c99-310aa14c874c,"Plan hash value: 165028050
+
+----------------------------------------------------------------------------------------
+| Id  | Operation            | Name            | Rows  | Bytes | Cost (%CPU)| Time     |
+----------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT     |                 |    51 |  2244 |   147   (9)| 00:00:02 |
+|   1 |  SORT GROUP BY       |                 |    51 |  2244 |   147   (9)| 00:00:02 |
+|*  2 |   HASH JOIN          |                 | 86835 |  3731K|   140   (4)| 00:00:02 |
+|   3 |    TABLE ACCESS FULL | PRODUCT         |  1560 | 17160 |     8   (0)| 00:00:01 |
+|*  4 |    HASH JOIN         |                 | 86835 |  2798K|   131   (4)| 00:00:02 |
+|   5 |     TABLE ACCESS FULL| TIME_BY_DAY     |   730 |  8760 |     4   (0)| 00:00:01 |
+|   6 |     TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  1780K|   126   (3)| 00:00:02 |
+----------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""PRODUCT"".""PRODUCT_ID""=""FT"".""PRODUCT_ID"")
+4 - access(""TIME_BY_DAY"".""TIME_ID""=""FT"".""TIME_ID"")
+","with sales explain unit_sales by product_family, the_month against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",132,2244.0,397.0,147.0,51.0,896,42
+323,a5656f1d-0709-4330-8d65-d0266889ca93,"Plan hash value: 1148224997
+
+---------------------------------------------------------------------------------------
+| Id  | Operation           | Name            | Rows  | Bytes | Cost (%CPU)| Time     |
+---------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT    |                 |   730 | 21170 |   138   (8)| 00:00:02 |
+|   1 |  SORT GROUP BY      |                 |   730 | 21170 |   138   (8)| 00:00:02 |
+|*  2 |   HASH JOIN         |                 | 86835 |  2459K|   131   (4)| 00:00:02 |
+|   3 |    TABLE ACCESS FULL| TIME_BY_DAY     |   730 |  8760 |     4   (0)| 00:00:01 |
+|   4 |    TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  1441K|   126   (3)| 00:00:02 |
+---------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""TIME_BY_DAY"".""TIME_ID""=""FT"".""TIME_ID"")
+","with sales explain unit_sales by the_date against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",115,21170.0,265.0,138.0,730.0,896,34
+540,ffae3034-6b30-4075-a390-6a33851160ba,"Plan hash value: 165028050
+
+----------------------------------------------------------------------------------------
+| Id  | Operation            | Name            | Rows  | Bytes | Cost (%CPU)| Time     |
+----------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT     |                 |   764 | 37436 |   147   (9)| 00:00:02 |
+|   1 |  SORT GROUP BY       |                 |   764 | 37436 |   147   (9)| 00:00:02 |
+|*  2 |   HASH JOIN          |                 | 86835 |  4155K|   140   (4)| 00:00:02 |
+|   3 |    TABLE ACCESS FULL | PRODUCT         |  1560 | 24960 |     8   (0)| 00:00:01 |
+|*  4 |    HASH JOIN         |                 | 86835 |  2798K|   131   (4)| 00:00:02 |
+|   5 |     TABLE ACCESS FULL| TIME_BY_DAY     |   730 |  8760 |     4   (0)| 00:00:01 |
+|   6 |     TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  1780K|   126   (3)| 00:00:02 |
+----------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""PRODUCT"".""PRODUCT_ID""=""FT"".""PRODUCT_ID"")
+4 - access(""TIME_BY_DAY"".""TIME_ID""=""FT"".""TIME_ID"")
+","with sales explain unit_sales by product_category, the_month against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",134,37436.0,403.0,147.0,764.0,907,49
+1224,29265137-26a8-4561-95ff-a691e4249e43,"Plan hash value: 165028050
+
+----------------------------------------------------------------------------------------
+| Id  | Operation            | Name            | Rows  | Bytes | Cost (%CPU)| Time     |
+----------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT     |                 |  1731 | 83088 |   147   (9)| 00:00:02 |
+|   1 |  SORT GROUP BY       |                 |  1731 | 83088 |   147   (9)| 00:00:02 |
+|*  2 |   HASH JOIN          |                 | 86835 |  4070K|   140   (4)| 00:00:02 |
+|   3 |    TABLE ACCESS FULL | PRODUCT         |  1560 | 23400 |     8   (0)| 00:00:01 |
+|*  4 |    HASH JOIN         |                 | 86835 |  2798K|   131   (4)| 00:00:02 |
+|   5 |     TABLE ACCESS FULL| TIME_BY_DAY     |   730 |  8760 |     4   (0)| 00:00:01 |
+|   6 |     TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  1780K|   126   (3)| 00:00:02 |
+----------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""PRODUCT"".""PRODUCT_ID""=""FT"".""PRODUCT_ID"")
+4 - access(""TIME_BY_DAY"".""TIME_ID""=""FT"".""TIME_ID"")
+","with sales explain unit_sales by product_subcategory, the_month against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",137,83088.0,412.0,147.0,1731.0,906,52
+12113,3579e244-49f2-44ee-ac50-04b14f43302e,"Plan hash value: 251198219
+
+--------------------------------------------------------------------------------------------------
+| Id  | Operation              | Name            | Rows  | Bytes |TempSpc| Cost (%CPU)| Time     |
+--------------------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT       |                 | 10278 |   672K|       |   674   (3)| 00:00:09 |
+|   1 |  SORT GROUP BY         |                 | 10278 |   672K|   856K|   674   (3)| 00:00:09 |
+|*  2 |   HASH JOIN            |                 | 10278 |   672K|       |   508   (3)| 00:00:07 |
+|   3 |    TABLE ACCESS FULL   | TIME_BY_DAY     |   730 |  8760 |       |     4   (0)| 00:00:01 |
+|   4 |    VIEW                | VW_GBC_9        | 10278 |   552K|       |   503   (3)| 00:00:07 |
+|   5 |     HASH GROUP BY      |                 | 10278 |   371K|  4440K|   503   (3)| 00:00:07 |
+|*  6 |      HASH JOIN         |                 | 86835 |  3137K|       |   135   (3)| 00:00:02 |
+|   7 |       TABLE ACCESS FULL| PRODUCT         |  1560 | 24960 |       |     8   (0)| 00:00:01 |
+|   8 |       TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  1780K|       |   126   (3)| 00:00:02 |
+--------------------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""TIME_BY_DAY"".""TIME_ID""=""ITEM_1"")
+6 - access(""PRODUCT"".""PRODUCT_ID""=""FT"".""PRODUCT_ID"")
+","with sales explain unit_sales by product_category, the_date against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",133,672000.0,400.0,674.0,10278.0,934,53
+16949,d659ebe6-0338-4e94-abb9-7b025eb4f4ea,"Plan hash value: 1148224997
+
+-----------------------------------------------------------------------------------------------
+| Id  | Operation           | Name            | Rows  | Bytes |TempSpc| Cost (%CPU)| Time     |
+-----------------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT    |                 | 86835 |  2883K|       |   928   (2)| 00:00:12 |
+|   1 |  SORT GROUP BY      |                 | 86835 |  2883K|  4096K|   928   (2)| 00:00:12 |
+|*  2 |   HASH JOIN         |                 | 86835 |  2883K|       |   131   (4)| 00:00:02 |
+|   3 |    TABLE ACCESS FULL| TIME_BY_DAY     |   730 |  8760 |       |     4   (0)| 00:00:01 |
+|   4 |    TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  1865K|       |   126   (3)| 00:00:02 |
+-----------------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""TIME_BY_DAY"".""TIME_ID""=""FT"".""TIME_ID"")
+","with sales explain unit_sales by customer_id, the_month against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",129,2883000.0,395.0,928.0,86835.0,955,77
+18492,ba28319b-b266-449f-821c-9da5ba0d41a1,"Plan hash value: 1148224997
+
+-----------------------------------------------------------------------------------------------
+| Id  | Operation           | Name            | Rows  | Bytes |TempSpc| Cost (%CPU)| Time     |
+-----------------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT    |                 | 26458 |   852K|       |   563   (2)| 00:00:07 |
+|   1 |  SORT GROUP BY      |                 | 26458 |   852K|  4096K|   563   (2)| 00:00:07 |
+|*  2 |   HASH JOIN         |                 | 86835 |  2798K|       |   131   (4)| 00:00:02 |
+|   3 |    TABLE ACCESS FULL| TIME_BY_DAY     |   730 |  8760 |       |     4   (0)| 00:00:01 |
+|   4 |    TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  1780K|       |   126   (3)| 00:00:02 |
+-----------------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""TIME_BY_DAY"".""TIME_ID""=""FT"".""TIME_ID"")
+","with sales explain unit_sales by product_id, the_month against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",128,852000.0,385.0,563.0,26458.0,949,62
+20525,564350b5-7059-4e1e-97b0-0bba3a68cade,"Plan hash value: 1148224997
+
+-----------------------------------------------------------------------------------------------
+| Id  | Operation           | Name            | Rows  | Bytes |TempSpc| Cost (%CPU)| Time     |
+-----------------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT    |                 | 86835 |  2883K|       |   928   (2)| 00:00:12 |
+|   1 |  SORT GROUP BY      |                 | 86835 |  2883K|  4096K|   928   (2)| 00:00:12 |
+|*  2 |   HASH JOIN         |                 | 86835 |  2883K|       |   131   (4)| 00:00:02 |
+|   3 |    TABLE ACCESS FULL| TIME_BY_DAY     |   730 |  8760 |       |     4   (0)| 00:00:01 |
+|   4 |    TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  1865K|       |   126   (3)| 00:00:02 |
+-----------------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""TIME_BY_DAY"".""TIME_ID""=""FT"".""TIME_ID"")
+","with sales explain unit_sales by customer_id, the_date against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",128,2883000.0,392.0,928.0,86835.0,941,73
+77832,26150b40-f559-4371-9990-0945429e1f59,"Plan hash value: 1148224997
+
+-----------------------------------------------------------------------------------------------
+| Id  | Operation           | Name            | Rows  | Bytes |TempSpc| Cost (%CPU)| Time     |
+-----------------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT    |                 | 86835 |  2798K|       |   911   (2)| 00:00:11 |
+|   1 |  SORT GROUP BY      |                 | 86835 |  2798K|  4096K|   911   (2)| 00:00:11 |
+|*  2 |   HASH JOIN         |                 | 86835 |  2798K|       |   131   (4)| 00:00:02 |
+|   3 |    TABLE ACCESS FULL| TIME_BY_DAY     |   730 |  8760 |       |     4   (0)| 00:00:01 |
+|   4 |    TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  1780K|       |   126   (3)| 00:00:02 |
+-----------------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""TIME_BY_DAY"".""TIME_ID""=""FT"".""TIME_ID"")
+","with sales explain unit_sales by product_id, the_date against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",127,2798000.0,382.0,911.0,86835.0,1048,75
+86832,0b56c038-5e19-4b38-911b-63606657e708,"Plan hash value: 1148224997
+
+-----------------------------------------------------------------------------------------------
+| Id  | Operation           | Name            | Rows  | Bytes |TempSpc| Cost (%CPU)| Time     |
+-----------------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT    |                 | 86835 |  3222K|       |   994   (2)| 00:00:12 |
+|   1 |  SORT GROUP BY      |                 | 86835 |  3222K|  4800K|   994   (2)| 00:00:12 |
+|*  2 |   HASH JOIN         |                 | 86835 |  3222K|       |   131   (4)| 00:00:02 |
+|   3 |    TABLE ACCESS FULL| TIME_BY_DAY     |   730 |  8760 |       |     4   (0)| 00:00:01 |
+|   4 |    TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  2204K|       |   126   (3)| 00:00:02 |
+-----------------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""TIME_BY_DAY"".""TIME_ID""=""FT"".""TIME_ID"")
+","with sales explain unit_sales by customer_id, product_id, the_date against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",140,3222000.0,509.0,994.0,86835.0,1062,108
+12,993a75f0-2bae-48d0-bc23-09f3e3cfef90,"Plan hash value: 1148224997
+
+---------------------------------------------------------------------------------------
+| Id  | Operation           | Name            | Rows  | Bytes | Cost (%CPU)| Time     |
+---------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT    |                 |    24 |   696 |   138   (8)| 00:00:02 |
+|   1 |  SORT GROUP BY      |                 |    24 |   696 |   138   (8)| 00:00:02 |
+|*  2 |   HASH JOIN         |                 | 86835 |  2459K|   131   (4)| 00:00:02 |
+|   3 |    TABLE ACCESS FULL| TIME_BY_DAY     |   730 |  8760 |     4   (0)| 00:00:01 |
+|   4 |    TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  1441K|   126   (3)| 00:00:02 |
+---------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""TIME_BY_DAY"".""TIME_ID""=""FT"".""TIME_ID"")
+","with sales explain unit_sales by the_month against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",116,696.0,268.0,138.0,24.0,873,29
+36,88152fa3-6c22-4775-8596-1549e299e19c,"Plan hash value: 165028050
+
+----------------------------------------------------------------------------------------
+| Id  | Operation            | Name            | Rows  | Bytes | Cost (%CPU)| Time     |
+----------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT     |                 |    51 |  2244 |   147   (9)| 00:00:02 |
+|   1 |  SORT GROUP BY       |                 |    51 |  2244 |   147   (9)| 00:00:02 |
+|*  2 |   HASH JOIN          |                 | 86835 |  3731K|   140   (4)| 00:00:02 |
+|   3 |    TABLE ACCESS FULL | PRODUCT         |  1560 | 17160 |     8   (0)| 00:00:01 |
+|*  4 |    HASH JOIN         |                 | 86835 |  2798K|   131   (4)| 00:00:02 |
+|   5 |     TABLE ACCESS FULL| TIME_BY_DAY     |   730 |  8760 |     4   (0)| 00:00:01 |
+|   6 |     TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  1780K|   126   (3)| 00:00:02 |
+----------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""PRODUCT"".""PRODUCT_ID""=""FT"".""PRODUCT_ID"")
+4 - access(""TIME_BY_DAY"".""TIME_ID""=""FT"".""TIME_ID"")
+","with sales explain unit_sales by product_family, the_month against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",132,2244.0,397.0,147.0,51.0,880,38
+323,3ed42d3f-23fe-45d2-88aa-142824bdbdc7,"Plan hash value: 1148224997
+
+---------------------------------------------------------------------------------------
+| Id  | Operation           | Name            | Rows  | Bytes | Cost (%CPU)| Time     |
+---------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT    |                 |   730 | 21170 |   138   (8)| 00:00:02 |
+|   1 |  SORT GROUP BY      |                 |   730 | 21170 |   138   (8)| 00:00:02 |
+|*  2 |   HASH JOIN         |                 | 86835 |  2459K|   131   (4)| 00:00:02 |
+|   3 |    TABLE ACCESS FULL| TIME_BY_DAY     |   730 |  8760 |     4   (0)| 00:00:01 |
+|   4 |    TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  1441K|   126   (3)| 00:00:02 |
+---------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""TIME_BY_DAY"".""TIME_ID""=""FT"".""TIME_ID"")
+","with sales explain unit_sales by the_date against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",115,21170.0,265.0,138.0,730.0,902,35
+540,8a477315-3628-4377-a270-57acbaa71c1a,"Plan hash value: 165028050
+
+----------------------------------------------------------------------------------------
+| Id  | Operation            | Name            | Rows  | Bytes | Cost (%CPU)| Time     |
+----------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT     |                 |   764 | 37436 |   147   (9)| 00:00:02 |
+|   1 |  SORT GROUP BY       |                 |   764 | 37436 |   147   (9)| 00:00:02 |
+|*  2 |   HASH JOIN          |                 | 86835 |  4155K|   140   (4)| 00:00:02 |
+|   3 |    TABLE ACCESS FULL | PRODUCT         |  1560 | 24960 |     8   (0)| 00:00:01 |
+|*  4 |    HASH JOIN         |                 | 86835 |  2798K|   131   (4)| 00:00:02 |
+|   5 |     TABLE ACCESS FULL| TIME_BY_DAY     |   730 |  8760 |     4   (0)| 00:00:01 |
+|   6 |     TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  1780K|   126   (3)| 00:00:02 |
+----------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""PRODUCT"".""PRODUCT_ID""=""FT"".""PRODUCT_ID"")
+4 - access(""TIME_BY_DAY"".""TIME_ID""=""FT"".""TIME_ID"")
+","with sales explain unit_sales by product_category, the_month against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",134,37436.0,403.0,147.0,764.0,893,49
+1224,19d43cfa-ee95-4eba-ba93-12f51c8eb6e0,"Plan hash value: 165028050
+
+----------------------------------------------------------------------------------------
+| Id  | Operation            | Name            | Rows  | Bytes | Cost (%CPU)| Time     |
+----------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT     |                 |  1731 | 83088 |   147   (9)| 00:00:02 |
+|   1 |  SORT GROUP BY       |                 |  1731 | 83088 |   147   (9)| 00:00:02 |
+|*  2 |   HASH JOIN          |                 | 86835 |  4070K|   140   (4)| 00:00:02 |
+|   3 |    TABLE ACCESS FULL | PRODUCT         |  1560 | 23400 |     8   (0)| 00:00:01 |
+|*  4 |    HASH JOIN         |                 | 86835 |  2798K|   131   (4)| 00:00:02 |
+|   5 |     TABLE ACCESS FULL| TIME_BY_DAY     |   730 |  8760 |     4   (0)| 00:00:01 |
+|   6 |     TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  1780K|   126   (3)| 00:00:02 |
+----------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""PRODUCT"".""PRODUCT_ID""=""FT"".""PRODUCT_ID"")
+4 - access(""TIME_BY_DAY"".""TIME_ID""=""FT"".""TIME_ID"")
+","with sales explain unit_sales by product_subcategory, the_month against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",137,83088.0,412.0,147.0,1731.0,890,58
+12113,b61d7192-84c3-4fe3-87da-de16d7def850,"Plan hash value: 251198219
+
+--------------------------------------------------------------------------------------------------
+| Id  | Operation              | Name            | Rows  | Bytes |TempSpc| Cost (%CPU)| Time     |
+--------------------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT       |                 | 10278 |   672K|       |   674   (3)| 00:00:09 |
+|   1 |  SORT GROUP BY         |                 | 10278 |   672K|   856K|   674   (3)| 00:00:09 |
+|*  2 |   HASH JOIN            |                 | 10278 |   672K|       |   508   (3)| 00:00:07 |
+|   3 |    TABLE ACCESS FULL   | TIME_BY_DAY     |   730 |  8760 |       |     4   (0)| 00:00:01 |
+|   4 |    VIEW                | VW_GBC_9        | 10278 |   552K|       |   503   (3)| 00:00:07 |
+|   5 |     HASH GROUP BY      |                 | 10278 |   371K|  4440K|   503   (3)| 00:00:07 |
+|*  6 |      HASH JOIN         |                 | 86835 |  3137K|       |   135   (3)| 00:00:02 |
+|   7 |       TABLE ACCESS FULL| PRODUCT         |  1560 | 24960 |       |     8   (0)| 00:00:01 |
+|   8 |       TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  1780K|       |   126   (3)| 00:00:02 |
+--------------------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""TIME_BY_DAY"".""TIME_ID""=""ITEM_1"")
+6 - access(""PRODUCT"".""PRODUCT_ID""=""FT"".""PRODUCT_ID"")
+","with sales explain unit_sales by product_category, the_date against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",133,672000.0,400.0,674.0,10278.0,927,51
+16949,812acf77-1cdc-4e9e-9e96-11ee4674cb1e,"Plan hash value: 1148224997
+
+-----------------------------------------------------------------------------------------------
+| Id  | Operation           | Name            | Rows  | Bytes |TempSpc| Cost (%CPU)| Time     |
+-----------------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT    |                 | 86835 |  2883K|       |   928   (2)| 00:00:12 |
+|   1 |  SORT GROUP BY      |                 | 86835 |  2883K|  4096K|   928   (2)| 00:00:12 |
+|*  2 |   HASH JOIN         |                 | 86835 |  2883K|       |   131   (4)| 00:00:02 |
+|   3 |    TABLE ACCESS FULL| TIME_BY_DAY     |   730 |  8760 |       |     4   (0)| 00:00:01 |
+|   4 |    TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  1865K|       |   126   (3)| 00:00:02 |
+-----------------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""TIME_BY_DAY"".""TIME_ID""=""FT"".""TIME_ID"")
+","with sales explain unit_sales by customer_id, the_month against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",129,2883000.0,395.0,928.0,86835.0,1031,70
+18492,a216952c-1710-4de5-80c9-17e2d9e19ecb,"Plan hash value: 1148224997
+
+-----------------------------------------------------------------------------------------------
+| Id  | Operation           | Name            | Rows  | Bytes |TempSpc| Cost (%CPU)| Time     |
+-----------------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT    |                 | 26458 |   852K|       |   563   (2)| 00:00:07 |
+|   1 |  SORT GROUP BY      |                 | 26458 |   852K|  4096K|   563   (2)| 00:00:07 |
+|*  2 |   HASH JOIN         |                 | 86835 |  2798K|       |   131   (4)| 00:00:02 |
+|   3 |    TABLE ACCESS FULL| TIME_BY_DAY     |   730 |  8760 |       |     4   (0)| 00:00:01 |
+|   4 |    TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  1780K|       |   126   (3)| 00:00:02 |
+-----------------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""TIME_BY_DAY"".""TIME_ID""=""FT"".""TIME_ID"")
+","with sales explain unit_sales by product_id, the_month against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",128,852000.0,385.0,563.0,26458.0,937,69
+20525,bf549310-641b-4290-a584-e45e249645fc,"Plan hash value: 1148224997
+
+-----------------------------------------------------------------------------------------------
+| Id  | Operation           | Name            | Rows  | Bytes |TempSpc| Cost (%CPU)| Time     |
+-----------------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT    |                 | 86835 |  2883K|       |   928   (2)| 00:00:12 |
+|   1 |  SORT GROUP BY      |                 | 86835 |  2883K|  4096K|   928   (2)| 00:00:12 |
+|*  2 |   HASH JOIN         |                 | 86835 |  2883K|       |   131   (4)| 00:00:02 |
+|   3 |    TABLE ACCESS FULL| TIME_BY_DAY     |   730 |  8760 |       |     4   (0)| 00:00:01 |
+|   4 |    TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  1865K|       |   126   (3)| 00:00:02 |
+-----------------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""TIME_BY_DAY"".""TIME_ID""=""FT"".""TIME_ID"")
+","with sales explain unit_sales by customer_id, the_date against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",128,2883000.0,392.0,928.0,86835.0,951,76
+77832,75932ba3-f385-43df-88dc-9b58ccb885a0,"Plan hash value: 1148224997
+
+-----------------------------------------------------------------------------------------------
+| Id  | Operation           | Name            | Rows  | Bytes |TempSpc| Cost (%CPU)| Time     |
+-----------------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT    |                 | 86835 |  2798K|       |   911   (2)| 00:00:11 |
+|   1 |  SORT GROUP BY      |                 | 86835 |  2798K|  4096K|   911   (2)| 00:00:11 |
+|*  2 |   HASH JOIN         |                 | 86835 |  2798K|       |   131   (4)| 00:00:02 |
+|   3 |    TABLE ACCESS FULL| TIME_BY_DAY     |   730 |  8760 |       |     4   (0)| 00:00:01 |
+|   4 |    TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  1780K|       |   126   (3)| 00:00:02 |
+-----------------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""TIME_BY_DAY"".""TIME_ID""=""FT"".""TIME_ID"")
+","with sales explain unit_sales by product_id, the_date against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",127,2798000.0,382.0,911.0,86835.0,1046,85
+86832,b197b63a-5a50-4585-95ff-df946b72ec81,"Plan hash value: 1148224997
+
+-----------------------------------------------------------------------------------------------
+| Id  | Operation           | Name            | Rows  | Bytes |TempSpc| Cost (%CPU)| Time     |
+-----------------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT    |                 | 86835 |  3222K|       |   994   (2)| 00:00:12 |
+|   1 |  SORT GROUP BY      |                 | 86835 |  3222K|  4800K|   994   (2)| 00:00:12 |
+|*  2 |   HASH JOIN         |                 | 86835 |  3222K|       |   131   (4)| 00:00:02 |
+|   3 |    TABLE ACCESS FULL| TIME_BY_DAY     |   730 |  8760 |       |     4   (0)| 00:00:01 |
+|   4 |    TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  2204K|       |   126   (3)| 00:00:02 |
+-----------------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""TIME_BY_DAY"".""TIME_ID""=""FT"".""TIME_ID"")
+","with sales explain unit_sales by customer_id, product_id, the_date against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",140,3222000.0,509.0,994.0,86835.0,1073,95
+12,e3bb2bd9-3dfb-4e84-932c-741eb8c9291f,"Plan hash value: 1148224997
+
+---------------------------------------------------------------------------------------
+| Id  | Operation           | Name            | Rows  | Bytes | Cost (%CPU)| Time     |
+---------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT    |                 |    24 |   696 |   138   (8)| 00:00:02 |
+|   1 |  SORT GROUP BY      |                 |    24 |   696 |   138   (8)| 00:00:02 |
+|*  2 |   HASH JOIN         |                 | 86835 |  2459K|   131   (4)| 00:00:02 |
+|   3 |    TABLE ACCESS FULL| TIME_BY_DAY     |   730 |  8760 |     4   (0)| 00:00:01 |
+|   4 |    TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  1441K|   126   (3)| 00:00:02 |
+---------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""TIME_BY_DAY"".""TIME_ID""=""FT"".""TIME_ID"")
+","with sales explain unit_sales by the_month against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",116,696.0,268.0,138.0,24.0,901,29
+36,67a377b8-b0c0-40d2-9df2-0bdab3b77ba2,"Plan hash value: 165028050
+
+----------------------------------------------------------------------------------------
+| Id  | Operation            | Name            | Rows  | Bytes | Cost (%CPU)| Time     |
+----------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT     |                 |    51 |  2244 |   147   (9)| 00:00:02 |
+|   1 |  SORT GROUP BY       |                 |    51 |  2244 |   147   (9)| 00:00:02 |
+|*  2 |   HASH JOIN          |                 | 86835 |  3731K|   140   (4)| 00:00:02 |
+|   3 |    TABLE ACCESS FULL | PRODUCT         |  1560 | 17160 |     8   (0)| 00:00:01 |
+|*  4 |    HASH JOIN         |                 | 86835 |  2798K|   131   (4)| 00:00:02 |
+|   5 |     TABLE ACCESS FULL| TIME_BY_DAY     |   730 |  8760 |     4   (0)| 00:00:01 |
+|   6 |     TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  1780K|   126   (3)| 00:00:02 |
+----------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""PRODUCT"".""PRODUCT_ID""=""FT"".""PRODUCT_ID"")
+4 - access(""TIME_BY_DAY"".""TIME_ID""=""FT"".""TIME_ID"")
+","with sales explain unit_sales by product_family, the_month against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",132,2244.0,397.0,147.0,51.0,918,45
+323,56595306-8b73-44de-8310-00606880be8a,"Plan hash value: 1148224997
+
+---------------------------------------------------------------------------------------
+| Id  | Operation           | Name            | Rows  | Bytes | Cost (%CPU)| Time     |
+---------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT    |                 |   730 | 21170 |   138   (8)| 00:00:02 |
+|   1 |  SORT GROUP BY      |                 |   730 | 21170 |   138   (8)| 00:00:02 |
+|*  2 |   HASH JOIN         |                 | 86835 |  2459K|   131   (4)| 00:00:02 |
+|   3 |    TABLE ACCESS FULL| TIME_BY_DAY     |   730 |  8760 |     4   (0)| 00:00:01 |
+|   4 |    TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  1441K|   126   (3)| 00:00:02 |
+---------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""TIME_BY_DAY"".""TIME_ID""=""FT"".""TIME_ID"")
+","with sales explain unit_sales by the_date against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",115,21170.0,265.0,138.0,730.0,1091,33
+540,d1f45f54-faa9-46e2-9f15-fe1c9ac2293f,"Plan hash value: 165028050
+
+----------------------------------------------------------------------------------------
+| Id  | Operation            | Name            | Rows  | Bytes | Cost (%CPU)| Time     |
+----------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT     |                 |   764 | 37436 |   147   (9)| 00:00:02 |
+|   1 |  SORT GROUP BY       |                 |   764 | 37436 |   147   (9)| 00:00:02 |
+|*  2 |   HASH JOIN          |                 | 86835 |  4155K|   140   (4)| 00:00:02 |
+|   3 |    TABLE ACCESS FULL | PRODUCT         |  1560 | 24960 |     8   (0)| 00:00:01 |
+|*  4 |    HASH JOIN         |                 | 86835 |  2798K|   131   (4)| 00:00:02 |
+|   5 |     TABLE ACCESS FULL| TIME_BY_DAY     |   730 |  8760 |     4   (0)| 00:00:01 |
+|   6 |     TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  1780K|   126   (3)| 00:00:02 |
+----------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""PRODUCT"".""PRODUCT_ID""=""FT"".""PRODUCT_ID"")
+4 - access(""TIME_BY_DAY"".""TIME_ID""=""FT"".""TIME_ID"")
+","with sales explain unit_sales by product_category, the_month against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",134,37436.0,403.0,147.0,764.0,934,56
+1224,6baadf3d-2d49-4a31-951c-ee3cbe10dd7f,"Plan hash value: 165028050
+
+----------------------------------------------------------------------------------------
+| Id  | Operation            | Name            | Rows  | Bytes | Cost (%CPU)| Time     |
+----------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT     |                 |  1731 | 83088 |   147   (9)| 00:00:02 |
+|   1 |  SORT GROUP BY       |                 |  1731 | 83088 |   147   (9)| 00:00:02 |
+|*  2 |   HASH JOIN          |                 | 86835 |  4070K|   140   (4)| 00:00:02 |
+|   3 |    TABLE ACCESS FULL | PRODUCT         |  1560 | 23400 |     8   (0)| 00:00:01 |
+|*  4 |    HASH JOIN         |                 | 86835 |  2798K|   131   (4)| 00:00:02 |
+|   5 |     TABLE ACCESS FULL| TIME_BY_DAY     |   730 |  8760 |     4   (0)| 00:00:01 |
+|   6 |     TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  1780K|   126   (3)| 00:00:02 |
+----------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""PRODUCT"".""PRODUCT_ID""=""FT"".""PRODUCT_ID"")
+4 - access(""TIME_BY_DAY"".""TIME_ID""=""FT"".""TIME_ID"")
+","with sales explain unit_sales by product_subcategory, the_month against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",137,83088.0,412.0,147.0,1731.0,944,58
+12113,8f2ed31a-4764-419a-9e31-1c874a999ef8,"Plan hash value: 251198219
+
+--------------------------------------------------------------------------------------------------
+| Id  | Operation              | Name            | Rows  | Bytes |TempSpc| Cost (%CPU)| Time     |
+--------------------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT       |                 | 10278 |   672K|       |   674   (3)| 00:00:09 |
+|   1 |  SORT GROUP BY         |                 | 10278 |   672K|   856K|   674   (3)| 00:00:09 |
+|*  2 |   HASH JOIN            |                 | 10278 |   672K|       |   508   (3)| 00:00:07 |
+|   3 |    TABLE ACCESS FULL   | TIME_BY_DAY     |   730 |  8760 |       |     4   (0)| 00:00:01 |
+|   4 |    VIEW                | VW_GBC_9        | 10278 |   552K|       |   503   (3)| 00:00:07 |
+|   5 |     HASH GROUP BY      |                 | 10278 |   371K|  4440K|   503   (3)| 00:00:07 |
+|*  6 |      HASH JOIN         |                 | 86835 |  3137K|       |   135   (3)| 00:00:02 |
+|   7 |       TABLE ACCESS FULL| PRODUCT         |  1560 | 24960 |       |     8   (0)| 00:00:01 |
+|   8 |       TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  1780K|       |   126   (3)| 00:00:02 |
+--------------------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""TIME_BY_DAY"".""TIME_ID""=""ITEM_1"")
+6 - access(""PRODUCT"".""PRODUCT_ID""=""FT"".""PRODUCT_ID"")
+","with sales explain unit_sales by product_category, the_date against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",133,672000.0,400.0,674.0,10278.0,941,45
+16949,1d06be4a-3029-4d38-926b-396ffb32cece,"Plan hash value: 1148224997
+
+-----------------------------------------------------------------------------------------------
+| Id  | Operation           | Name            | Rows  | Bytes |TempSpc| Cost (%CPU)| Time     |
+-----------------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT    |                 | 86835 |  2883K|       |   928   (2)| 00:00:12 |
+|   1 |  SORT GROUP BY      |                 | 86835 |  2883K|  4096K|   928   (2)| 00:00:12 |
+|*  2 |   HASH JOIN         |                 | 86835 |  2883K|       |   131   (4)| 00:00:02 |
+|   3 |    TABLE ACCESS FULL| TIME_BY_DAY     |   730 |  8760 |       |     4   (0)| 00:00:01 |
+|   4 |    TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  1865K|       |   126   (3)| 00:00:02 |
+-----------------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""TIME_BY_DAY"".""TIME_ID""=""FT"".""TIME_ID"")
+","with sales explain unit_sales by customer_id, the_month against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",129,2883000.0,395.0,928.0,86835.0,988,73
+18492,4341f1c3-e963-4ceb-b2f4-8f5d8eb92777,"Plan hash value: 1148224997
+
+-----------------------------------------------------------------------------------------------
+| Id  | Operation           | Name            | Rows  | Bytes |TempSpc| Cost (%CPU)| Time     |
+-----------------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT    |                 | 26458 |   852K|       |   563   (2)| 00:00:07 |
+|   1 |  SORT GROUP BY      |                 | 26458 |   852K|  4096K|   563   (2)| 00:00:07 |
+|*  2 |   HASH JOIN         |                 | 86835 |  2798K|       |   131   (4)| 00:00:02 |
+|   3 |    TABLE ACCESS FULL| TIME_BY_DAY     |   730 |  8760 |       |     4   (0)| 00:00:01 |
+|   4 |    TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  1780K|       |   126   (3)| 00:00:02 |
+-----------------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""TIME_BY_DAY"".""TIME_ID""=""FT"".""TIME_ID"")
+","with sales explain unit_sales by product_id, the_month against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",128,852000.0,385.0,563.0,26458.0,952,66
+20525,1e033bf4-3660-4fcf-a014-2c095bb8a8b3,"Plan hash value: 1148224997
+
+-----------------------------------------------------------------------------------------------
+| Id  | Operation           | Name            | Rows  | Bytes |TempSpc| Cost (%CPU)| Time     |
+-----------------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT    |                 | 86835 |  2883K|       |   928   (2)| 00:00:12 |
+|   1 |  SORT GROUP BY      |                 | 86835 |  2883K|  4096K|   928   (2)| 00:00:12 |
+|*  2 |   HASH JOIN         |                 | 86835 |  2883K|       |   131   (4)| 00:00:02 |
+|   3 |    TABLE ACCESS FULL| TIME_BY_DAY     |   730 |  8760 |       |     4   (0)| 00:00:01 |
+|   4 |    TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  1865K|       |   126   (3)| 00:00:02 |
+-----------------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""TIME_BY_DAY"".""TIME_ID""=""FT"".""TIME_ID"")
+","with sales explain unit_sales by customer_id, the_date against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",128,2883000.0,392.0,928.0,86835.0,943,68
+77832,2fc97bef-a65d-474c-b6d2-84a6bf8ae4ba,"Plan hash value: 1148224997
+
+-----------------------------------------------------------------------------------------------
+| Id  | Operation           | Name            | Rows  | Bytes |TempSpc| Cost (%CPU)| Time     |
+-----------------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT    |                 | 86835 |  2798K|       |   911   (2)| 00:00:11 |
+|   1 |  SORT GROUP BY      |                 | 86835 |  2798K|  4096K|   911   (2)| 00:00:11 |
+|*  2 |   HASH JOIN         |                 | 86835 |  2798K|       |   131   (4)| 00:00:02 |
+|   3 |    TABLE ACCESS FULL| TIME_BY_DAY     |   730 |  8760 |       |     4   (0)| 00:00:01 |
+|   4 |    TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  1780K|       |   126   (3)| 00:00:02 |
+-----------------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""TIME_BY_DAY"".""TIME_ID""=""FT"".""TIME_ID"")
+","with sales explain unit_sales by product_id, the_date against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",127,2798000.0,382.0,911.0,86835.0,1181,83
+86832,22cd82ca-68e3-430e-b859-508a845a7634,"Plan hash value: 1148224997
+
+-----------------------------------------------------------------------------------------------
+| Id  | Operation           | Name            | Rows  | Bytes |TempSpc| Cost (%CPU)| Time     |
+-----------------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT    |                 | 86835 |  3222K|       |   994   (2)| 00:00:12 |
+|   1 |  SORT GROUP BY      |                 | 86835 |  3222K|  4800K|   994   (2)| 00:00:12 |
+|*  2 |   HASH JOIN         |                 | 86835 |  3222K|       |   131   (4)| 00:00:02 |
+|   3 |    TABLE ACCESS FULL| TIME_BY_DAY     |   730 |  8760 |       |     4   (0)| 00:00:01 |
+|   4 |    TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  2204K|       |   126   (3)| 00:00:02 |
+-----------------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""TIME_BY_DAY"".""TIME_ID""=""FT"".""TIME_ID"")
+","with sales explain unit_sales by customer_id, product_id, the_date against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",140,3222000.0,509.0,994.0,86835.0,1102,93
+12,8fdff5f0-1e65-49d1-a8a2-67ef7b27aff8,"Plan hash value: 1148224997
+
+---------------------------------------------------------------------------------------
+| Id  | Operation           | Name            | Rows  | Bytes | Cost (%CPU)| Time     |
+---------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT    |                 |    24 |   696 |   138   (8)| 00:00:02 |
+|   1 |  SORT GROUP BY      |                 |    24 |   696 |   138   (8)| 00:00:02 |
+|*  2 |   HASH JOIN         |                 | 86835 |  2459K|   131   (4)| 00:00:02 |
+|   3 |    TABLE ACCESS FULL| TIME_BY_DAY     |   730 |  8760 |     4   (0)| 00:00:01 |
+|   4 |    TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  1441K|   126   (3)| 00:00:02 |
+---------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""TIME_BY_DAY"".""TIME_ID""=""FT"".""TIME_ID"")
+","with sales explain unit_sales by the_month against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",116,696.0,268.0,138.0,24.0,895,30
+36,6ab579b7-2961-4e73-b331-51c3c2eac6ca,"Plan hash value: 165028050
+
+----------------------------------------------------------------------------------------
+| Id  | Operation            | Name            | Rows  | Bytes | Cost (%CPU)| Time     |
+----------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT     |                 |    51 |  2244 |   147   (9)| 00:00:02 |
+|   1 |  SORT GROUP BY       |                 |    51 |  2244 |   147   (9)| 00:00:02 |
+|*  2 |   HASH JOIN          |                 | 86835 |  3731K|   140   (4)| 00:00:02 |
+|   3 |    TABLE ACCESS FULL | PRODUCT         |  1560 | 17160 |     8   (0)| 00:00:01 |
+|*  4 |    HASH JOIN         |                 | 86835 |  2798K|   131   (4)| 00:00:02 |
+|   5 |     TABLE ACCESS FULL| TIME_BY_DAY     |   730 |  8760 |     4   (0)| 00:00:01 |
+|   6 |     TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  1780K|   126   (3)| 00:00:02 |
+----------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""PRODUCT"".""PRODUCT_ID""=""FT"".""PRODUCT_ID"")
+4 - access(""TIME_BY_DAY"".""TIME_ID""=""FT"".""TIME_ID"")
+","with sales explain unit_sales by product_family, the_month against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",132,2244.0,397.0,147.0,51.0,882,39
+323,2dcddcd3-5f55-433c-bef3-0797e7c8c82b,"Plan hash value: 1148224997
+
+---------------------------------------------------------------------------------------
+| Id  | Operation           | Name            | Rows  | Bytes | Cost (%CPU)| Time     |
+---------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT    |                 |   730 | 21170 |   138   (8)| 00:00:02 |
+|   1 |  SORT GROUP BY      |                 |   730 | 21170 |   138   (8)| 00:00:02 |
+|*  2 |   HASH JOIN         |                 | 86835 |  2459K|   131   (4)| 00:00:02 |
+|   3 |    TABLE ACCESS FULL| TIME_BY_DAY     |   730 |  8760 |     4   (0)| 00:00:01 |
+|   4 |    TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  1441K|   126   (3)| 00:00:02 |
+---------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""TIME_BY_DAY"".""TIME_ID""=""FT"".""TIME_ID"")
+","with sales explain unit_sales by the_date against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",115,21170.0,265.0,138.0,730.0,898,42
+540,7ecdb0d1-db18-424e-b2e7-ac88b91a294a,"Plan hash value: 165028050
+
+----------------------------------------------------------------------------------------
+| Id  | Operation            | Name            | Rows  | Bytes | Cost (%CPU)| Time     |
+----------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT     |                 |   764 | 37436 |   147   (9)| 00:00:02 |
+|   1 |  SORT GROUP BY       |                 |   764 | 37436 |   147   (9)| 00:00:02 |
+|*  2 |   HASH JOIN          |                 | 86835 |  4155K|   140   (4)| 00:00:02 |
+|   3 |    TABLE ACCESS FULL | PRODUCT         |  1560 | 24960 |     8   (0)| 00:00:01 |
+|*  4 |    HASH JOIN         |                 | 86835 |  2798K|   131   (4)| 00:00:02 |
+|   5 |     TABLE ACCESS FULL| TIME_BY_DAY     |   730 |  8760 |     4   (0)| 00:00:01 |
+|   6 |     TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  1780K|   126   (3)| 00:00:02 |
+----------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""PRODUCT"".""PRODUCT_ID""=""FT"".""PRODUCT_ID"")
+4 - access(""TIME_BY_DAY"".""TIME_ID""=""FT"".""TIME_ID"")
+","with sales explain unit_sales by product_category, the_month against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",134,37436.0,403.0,147.0,764.0,943,72
+1224,4c72c617-4e9d-4997-8e98-c08411d69c85,"Plan hash value: 165028050
+
+----------------------------------------------------------------------------------------
+| Id  | Operation            | Name            | Rows  | Bytes | Cost (%CPU)| Time     |
+----------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT     |                 |  1731 | 83088 |   147   (9)| 00:00:02 |
+|   1 |  SORT GROUP BY       |                 |  1731 | 83088 |   147   (9)| 00:00:02 |
+|*  2 |   HASH JOIN          |                 | 86835 |  4070K|   140   (4)| 00:00:02 |
+|   3 |    TABLE ACCESS FULL | PRODUCT         |  1560 | 23400 |     8   (0)| 00:00:01 |
+|*  4 |    HASH JOIN         |                 | 86835 |  2798K|   131   (4)| 00:00:02 |
+|   5 |     TABLE ACCESS FULL| TIME_BY_DAY     |   730 |  8760 |     4   (0)| 00:00:01 |
+|   6 |     TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  1780K|   126   (3)| 00:00:02 |
+----------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""PRODUCT"".""PRODUCT_ID""=""FT"".""PRODUCT_ID"")
+4 - access(""TIME_BY_DAY"".""TIME_ID""=""FT"".""TIME_ID"")
+","with sales explain unit_sales by product_subcategory, the_month against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",137,83088.0,412.0,147.0,1731.0,903,54
+12113,a01d86bc-c84c-4c6b-83d2-b37df12e184a,"Plan hash value: 251198219
+
+--------------------------------------------------------------------------------------------------
+| Id  | Operation              | Name            | Rows  | Bytes |TempSpc| Cost (%CPU)| Time     |
+--------------------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT       |                 | 10278 |   672K|       |   674   (3)| 00:00:09 |
+|   1 |  SORT GROUP BY         |                 | 10278 |   672K|   856K|   674   (3)| 00:00:09 |
+|*  2 |   HASH JOIN            |                 | 10278 |   672K|       |   508   (3)| 00:00:07 |
+|   3 |    TABLE ACCESS FULL   | TIME_BY_DAY     |   730 |  8760 |       |     4   (0)| 00:00:01 |
+|   4 |    VIEW                | VW_GBC_9        | 10278 |   552K|       |   503   (3)| 00:00:07 |
+|   5 |     HASH GROUP BY      |                 | 10278 |   371K|  4440K|   503   (3)| 00:00:07 |
+|*  6 |      HASH JOIN         |                 | 86835 |  3137K|       |   135   (3)| 00:00:02 |
+|   7 |       TABLE ACCESS FULL| PRODUCT         |  1560 | 24960 |       |     8   (0)| 00:00:01 |
+|   8 |       TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  1780K|       |   126   (3)| 00:00:02 |
+--------------------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""TIME_BY_DAY"".""TIME_ID""=""ITEM_1"")
+6 - access(""PRODUCT"".""PRODUCT_ID""=""FT"".""PRODUCT_ID"")
+","with sales explain unit_sales by product_category, the_date against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",133,672000.0,400.0,674.0,10278.0,920,49
+16949,9ba2a8bb-e9f9-4f72-9e67-d057618f607e,"Plan hash value: 1148224997
+
+-----------------------------------------------------------------------------------------------
+| Id  | Operation           | Name            | Rows  | Bytes |TempSpc| Cost (%CPU)| Time     |
+-----------------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT    |                 | 86835 |  2883K|       |   928   (2)| 00:00:12 |
+|   1 |  SORT GROUP BY      |                 | 86835 |  2883K|  4096K|   928   (2)| 00:00:12 |
+|*  2 |   HASH JOIN         |                 | 86835 |  2883K|       |   131   (4)| 00:00:02 |
+|   3 |    TABLE ACCESS FULL| TIME_BY_DAY     |   730 |  8760 |       |     4   (0)| 00:00:01 |
+|   4 |    TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  1865K|       |   126   (3)| 00:00:02 |
+-----------------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""TIME_BY_DAY"".""TIME_ID""=""FT"".""TIME_ID"")
+","with sales explain unit_sales by customer_id, the_month against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",129,2883000.0,395.0,928.0,86835.0,942,67
+18492,10aff42b-c9ca-4d72-80a0-54221595c066,"Plan hash value: 1148224997
+
+-----------------------------------------------------------------------------------------------
+| Id  | Operation           | Name            | Rows  | Bytes |TempSpc| Cost (%CPU)| Time     |
+-----------------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT    |                 | 26458 |   852K|       |   563   (2)| 00:00:07 |
+|   1 |  SORT GROUP BY      |                 | 26458 |   852K|  4096K|   563   (2)| 00:00:07 |
+|*  2 |   HASH JOIN         |                 | 86835 |  2798K|       |   131   (4)| 00:00:02 |
+|   3 |    TABLE ACCESS FULL| TIME_BY_DAY     |   730 |  8760 |       |     4   (0)| 00:00:01 |
+|   4 |    TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  1780K|       |   126   (3)| 00:00:02 |
+-----------------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""TIME_BY_DAY"".""TIME_ID""=""FT"".""TIME_ID"")
+","with sales explain unit_sales by product_id, the_month against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",128,852000.0,385.0,563.0,26458.0,940,64
+20525,db9156af-700e-469f-bd24-b3508d3d7f29,"Plan hash value: 1148224997
+
+-----------------------------------------------------------------------------------------------
+| Id  | Operation           | Name            | Rows  | Bytes |TempSpc| Cost (%CPU)| Time     |
+-----------------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT    |                 | 86835 |  2883K|       |   928   (2)| 00:00:12 |
+|   1 |  SORT GROUP BY      |                 | 86835 |  2883K|  4096K|   928   (2)| 00:00:12 |
+|*  2 |   HASH JOIN         |                 | 86835 |  2883K|       |   131   (4)| 00:00:02 |
+|   3 |    TABLE ACCESS FULL| TIME_BY_DAY     |   730 |  8760 |       |     4   (0)| 00:00:01 |
+|   4 |    TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  1865K|       |   126   (3)| 00:00:02 |
+-----------------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""TIME_BY_DAY"".""TIME_ID""=""FT"".""TIME_ID"")
+","with sales explain unit_sales by customer_id, the_date against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",128,2883000.0,392.0,928.0,86835.0,925,71
+77832,4e929e02-fd64-4f0d-b389-527ba4260c30,"Plan hash value: 1148224997
+
+-----------------------------------------------------------------------------------------------
+| Id  | Operation           | Name            | Rows  | Bytes |TempSpc| Cost (%CPU)| Time     |
+-----------------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT    |                 | 86835 |  2798K|       |   911   (2)| 00:00:11 |
+|   1 |  SORT GROUP BY      |                 | 86835 |  2798K|  4096K|   911   (2)| 00:00:11 |
+|*  2 |   HASH JOIN         |                 | 86835 |  2798K|       |   131   (4)| 00:00:02 |
+|   3 |    TABLE ACCESS FULL| TIME_BY_DAY     |   730 |  8760 |       |     4   (0)| 00:00:01 |
+|   4 |    TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  1780K|       |   126   (3)| 00:00:02 |
+-----------------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""TIME_BY_DAY"".""TIME_ID""=""FT"".""TIME_ID"")
+","with sales explain unit_sales by product_id, the_date against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",127,2798000.0,382.0,911.0,86835.0,1038,77
+86832,5b324f5e-3f10-4625-82eb-a8487f0e75cf,"Plan hash value: 1148224997
+
+-----------------------------------------------------------------------------------------------
+| Id  | Operation           | Name            | Rows  | Bytes |TempSpc| Cost (%CPU)| Time     |
+-----------------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT    |                 | 86835 |  3222K|       |   994   (2)| 00:00:12 |
+|   1 |  SORT GROUP BY      |                 | 86835 |  3222K|  4800K|   994   (2)| 00:00:12 |
+|*  2 |   HASH JOIN         |                 | 86835 |  3222K|       |   131   (4)| 00:00:02 |
+|   3 |    TABLE ACCESS FULL| TIME_BY_DAY     |   730 |  8760 |       |     4   (0)| 00:00:01 |
+|   4 |    TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  2204K|       |   126   (3)| 00:00:02 |
+-----------------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""TIME_BY_DAY"".""TIME_ID""=""FT"".""TIME_ID"")
+","with sales explain unit_sales by customer_id, product_id, the_date against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",140,3222000.0,509.0,994.0,86835.0,1060,88
+12,fca35d12-256a-49a6-b0e1-8e0edb33fb6c,"Plan hash value: 1148224997
+
+---------------------------------------------------------------------------------------
+| Id  | Operation           | Name            | Rows  | Bytes | Cost (%CPU)| Time     |
+---------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT    |                 |    24 |   696 |   138   (8)| 00:00:02 |
+|   1 |  SORT GROUP BY      |                 |    24 |   696 |   138   (8)| 00:00:02 |
+|*  2 |   HASH JOIN         |                 | 86835 |  2459K|   131   (4)| 00:00:02 |
+|   3 |    TABLE ACCESS FULL| TIME_BY_DAY     |   730 |  8760 |     4   (0)| 00:00:01 |
+|   4 |    TABLE ACCESS FULL| SALES_FACT_1997 | 86835 |  1441K|   126   (3)| 00:00:02 |
+---------------------------------------------------------------------------------------
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+2 - access(""TIME_BY_DAY"".""TIME_ID""=""FT"".""TIME_ID"")
+","with sales explain unit_sales by the_month against store_cost, store_sales using CrossCorrelation, Multireg, Polyfit",116,696.0,268.0,138.0,24.0,900,34
