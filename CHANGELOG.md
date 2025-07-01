@@ -1,3 +1,64 @@
+## [1.0.48](https://github.com/big-unibo/predict/compare/1.0.47...1.0.48) (2025-06-22)
+
+### Bug Fixes
+
+* **deps:** update dependency com.opencsv:opencsv to v5.11.2 ([#158](https://github.com/big-unibo/predict/issues/158)) ([f75ec6e](https://github.com/big-unibo/predict/commit/f75ec6e7201cec556e954721d4ef12214887391b))
+
+## [1.0.47](https://github.com/big-unibo/predict/compare/1.0.46...1.0.47) (2025-06-15)
+
+### Bug Fixes
+
+* **deps:** update dependency com.fasterxml.jackson.datatype:jackson-datatype-jsr310 to v2.19.1 ([#157](https://github.com/big-unibo/predict/issues/157)) ([38a6e04](https://github.com/big-unibo/predict/commit/38a6e04cc64e7726bfedc7e7a557cd80e6ec82a8))
+
+## [1.0.46](https://github.com/big-unibo/predict/compare/1.0.45...1.0.46) (2025-06-14)
+
+### Dependency updates
+
+* **deps:** update dependency requests to v2.32.4 ([#155](https://github.com/big-unibo/predict/issues/155)) ([6eaa47c](https://github.com/big-unibo/predict/commit/6eaa47cb33cca4b921e3ad42688d67c75eeaa368))
+
+### Bug Fixes
+
+* **deps:** update dependency com.fasterxml.jackson.dataformat:jackson-dataformat-yaml to v2.19.1 ([#156](https://github.com/big-unibo/predict/issues/156)) ([ccf72ea](https://github.com/big-unibo/predict/commit/ccf72ea3158beee5aeb5e75913ad8b772a105beb))
+
+## [1.0.45](https://github.com/big-unibo/predict/compare/1.0.44...1.0.45) (2025-06-07)
+
+### Dependency updates
+
+* **deps:** update dependency gradle to v7.6.5 ([#152](https://github.com/big-unibo/predict/issues/152)) ([3d0c5d7](https://github.com/big-unibo/predict/commit/3d0c5d776edd8bebb17c3147dfcad9ca1aab5c40))
+* **deps:** update dependency scikit-learn to v1.7.0 ([#153](https://github.com/big-unibo/predict/issues/153)) ([ea6d314](https://github.com/big-unibo/predict/commit/ea6d314342da1a6a312bebabcb3d55aa36b93da9))
+
+### Bug Fixes
+
+* **deps:** update dependency edu.stanford.nlp:stanford-corenlp to v4.5.10 ([#154](https://github.com/big-unibo/predict/issues/154)) ([f64fe67](https://github.com/big-unibo/predict/commit/f64fe676891c2eb38298c71633d2a71d8e7e0da8))
+
+## [1.0.44](https://github.com/big-unibo/predict/compare/1.0.43...1.0.44) (2025-06-02)
+
+### Dependency updates
+
+* **deps:** update dependency notebook to v7.4.3 ([#147](https://github.com/big-unibo/predict/issues/147)) ([d04eb0d](https://github.com/big-unibo/predict/commit/d04eb0d703670b0613d83de89c0cac11cf2da124))
+* **deps:** update dependency prophet to v1.1.7 ([#150](https://github.com/big-unibo/predict/issues/150)) ([eb581c7](https://github.com/big-unibo/predict/commit/eb581c71db817325c7225f7d28a60419e82743e7))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.132 ([#148](https://github.com/big-unibo/predict/issues/148)) ([d4c1956](https://github.com/big-unibo/predict/commit/d4c19565fbfa04f67f1715a053bd91375f43291c))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.133 ([#149](https://github.com/big-unibo/predict/issues/149)) ([00d0261](https://github.com/big-unibo/predict/commit/00d02617e2d9273c073c9d0eae7722700d225d11))
+
+### Bug Fixes
+
+* **deps:** update dependency com.opencsv:opencsv to v5.11.1 ([#151](https://github.com/big-unibo/predict/issues/151)) ([9dde58f](https://github.com/big-unibo/predict/commit/9dde58fa0cc9f69202f6c20731d96178cd47f0f0))
+
+## [1.0.43](https://github.com/big-unibo/predict/compare/1.0.42...1.0.43) (2025-05-26)
+
+### Dependency updates
+
+* **deps:** update dependency notebook to v7.4.2 ([#140](https://github.com/big-unibo/predict/issues/140)) ([f0d1d69](https://github.com/big-unibo/predict/commit/f0d1d69365859824ce240f7adae27ddeec6b9cc7))
+* **deps:** update dependency scipy to v1.15.3 ([#141](https://github.com/big-unibo/predict/issues/141)) ([7e5c2c0](https://github.com/big-unibo/predict/commit/7e5c2c0c180d847c62e985071f824e3d9e2b6435))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.128 ([#142](https://github.com/big-unibo/predict/issues/142)) ([88a3c49](https://github.com/big-unibo/predict/commit/88a3c49a68bc7d88cfd47a871f328b4e276e689c))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.131 ([#145](https://github.com/big-unibo/predict/issues/145)) ([2f603ec](https://github.com/big-unibo/predict/commit/2f603ec668d2190c8aa14ad0e5eceff13424622a))
+* **deps:** update dependency sqlalchemy to v2.0.41 ([#143](https://github.com/big-unibo/predict/issues/143)) ([a8cc627](https://github.com/big-unibo/predict/commit/a8cc62740ea1444d3f69f1d9b4d40cde7a2ddbbe))
+* **deps:** update node.js to 22.16 ([#146](https://github.com/big-unibo/predict/issues/146)) ([9c1f310](https://github.com/big-unibo/predict/commit/9c1f310962d6bfd9c7950afcd8e00904089c9c6a))
+
+### Bug Fixes
+
+* **deps:** update dependency org.json:json to v20250517 ([#144](https://github.com/big-unibo/predict/issues/144)) ([a028765](https://github.com/big-unibo/predict/commit/a028765f40def2c05056638e50df26a56b3ff9b5))
+
 ## [1.0.42](https://github.com/big-unibo/predict/compare/1.0.41...1.0.42) (2025-05-05)
 
 ### Dependency updates
