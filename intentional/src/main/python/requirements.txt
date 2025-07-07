@@ -13,7 +13,7 @@ SQLAlchemy==2.0.41
 yellowbrick==1.5
 autots==0.6.21
 prophet==1.1.7
-statsmodels==0.14.4
+statsmodels==0.14.5
 python-dotenv==1.1.1
 psycopg2-binary==2.9.10
 pyarrow==20.0.0
