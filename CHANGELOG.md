@@ -1,3 +1,21 @@
+## [1.0.49](https://github.com/big-unibo/predict/compare/1.0.48...1.0.49) (2025-07-14)
+
+### Dependency updates
+
+* **deps:** update dependency gradle to v7.6.6 ([#169](https://github.com/big-unibo/predict/issues/169)) ([d01a9c3](https://github.com/big-unibo/predict/commit/d01a9c34660cdafea31819ac82b0d3865ccd5d38))
+* **deps:** update dependency notebook to v7.4.4 ([#166](https://github.com/big-unibo/predict/issues/166)) ([064f03d](https://github.com/big-unibo/predict/commit/064f03dd57dc0b0e5b2ca5c1dd9bf2da7fd33220))
+* **deps:** update dependency python-dotenv to v1.1.1 ([#160](https://github.com/big-unibo/predict/issues/160)) ([a75d737](https://github.com/big-unibo/predict/commit/a75d7376cbf2b26b47a8e34c003f301587dbe08f))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.134 ([#164](https://github.com/big-unibo/predict/issues/164)) ([e00a788](https://github.com/big-unibo/predict/commit/e00a7889f2e047e7ad352e47ccb4b35bfe76f9eb))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.135 ([#165](https://github.com/big-unibo/predict/issues/165)) ([215d395](https://github.com/big-unibo/predict/commit/215d395fc5d5bec1f2413d2fe5ee2c4b8d0aa598))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.136 ([#167](https://github.com/big-unibo/predict/issues/167)) ([c7a121b](https://github.com/big-unibo/predict/commit/c7a121b45bb46af374a6eaa00a294546cfaffd86))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.137 ([#172](https://github.com/big-unibo/predict/issues/172)) ([e50886a](https://github.com/big-unibo/predict/commit/e50886a6b0e23e51a8230ca1936689fa0ff08513))
+* **deps:** update dependency statsmodels to v0.14.5 ([#170](https://github.com/big-unibo/predict/issues/170)) ([7ef0590](https://github.com/big-unibo/predict/commit/7ef05905ec17fdee0e33e132f18105e06f1516b6))
+* **deps:** update node.js to 22.17 ([#163](https://github.com/big-unibo/predict/issues/163)) ([9633403](https://github.com/big-unibo/predict/commit/96334034988aaf7c4298de79d26039a8b7ae3c3d))
+
+### Bug Fixes
+
+* **deps:** update dependency org.apache.commons:commons-lang3 to v3.18.0 ([#171](https://github.com/big-unibo/predict/issues/171)) ([3a548d7](https://github.com/big-unibo/predict/commit/3a548d78a0e4fd85246c67b6e4287a860fa09aa6))
+
 ## [1.0.48](https://github.com/big-unibo/predict/compare/1.0.47...1.0.48) (2025-06-22)
 
 ### Bug Fixes
