@@ -1,3 +1,15 @@
+## [1.0.50](https://github.com/big-unibo/predict/compare/1.0.49...1.0.50) (2025-07-19)
+
+### Dependency updates
+
+* **deps:** update dependency pyarrow to v21 ([#174](https://github.com/big-unibo/predict/issues/174)) ([9b387da](https://github.com/big-unibo/predict/commit/9b387dab581e5dd82e1ea458dfc2bb64fe2c1235))
+* **deps:** update dependency scikit-learn to v1.7.1 ([#175](https://github.com/big-unibo/predict/issues/175)) ([3e7379e](https://github.com/big-unibo/predict/commit/3e7379e77573b72f6e9750edec6638dcf4d83b8f))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.138 ([#173](https://github.com/big-unibo/predict/issues/173)) ([3d7f248](https://github.com/big-unibo/predict/commit/3d7f248d19cdda684d02e1d06aa19995cf8bedf4))
+
+### Bug Fixes
+
+* **deps:** update dependency com.fasterxml.jackson.dataformat:jackson-dataformat-yaml to v2.19.2 ([#176](https://github.com/big-unibo/predict/issues/176)) ([2175d85](https://github.com/big-unibo/predict/commit/2175d855b5fdf67c74e66187bec75381d1d26b7b))
+
 ## [1.0.49](https://github.com/big-unibo/predict/compare/1.0.48...1.0.49) (2025-07-14)
 
 ### Dependency updates
