@@ -1,3 +1,9 @@
+## [1.0.52](https://github.com/big-unibo/predict/compare/1.0.51...1.0.52) (2025-07-20)
+
+### Bug Fixes
+
+* **deps:** update dependency commons-io:commons-io to v2.20.0 ([#178](https://github.com/big-unibo/predict/issues/178)) ([7be7291](https://github.com/big-unibo/predict/commit/7be7291ba42acb8a3650cd3eb073097338293817))
+
 ## [1.0.51](https://github.com/big-unibo/predict/compare/1.0.50...1.0.51) (2025-07-19)
 
 ### Bug Fixes
