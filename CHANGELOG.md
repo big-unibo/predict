@@ -1,3 +1,26 @@
+## [1.0.55](https://github.com/big-unibo/predict/compare/1.0.54...1.0.55) (2025-09-02)
+
+### Dependency updates
+
+* **deps:** update dependency notebook to v7.4.5 ([#185](https://github.com/big-unibo/predict/issues/185)) ([5f7dad3](https://github.com/big-unibo/predict/commit/5f7dad3b54c284f8df7077e9b85881d7c0de51b9))
+* **deps:** update dependency requests to v2.32.5 ([#190](https://github.com/big-unibo/predict/issues/190)) ([5b25ef9](https://github.com/big-unibo/predict/commit/5b25ef94b6d1b9eb6cf71ac26b91816589a3e5c5))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.139 ([#184](https://github.com/big-unibo/predict/issues/184)) ([98fa6aa](https://github.com/big-unibo/predict/commit/98fa6aa9e150fd37e9004521d93abcb1970bd6de))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.140 ([#189](https://github.com/big-unibo/predict/issues/189)) ([6af0518](https://github.com/big-unibo/predict/commit/6af0518904490aed2efc45a6913618fa98802aec))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.141 ([#192](https://github.com/big-unibo/predict/issues/192)) ([8897c80](https://github.com/big-unibo/predict/commit/8897c80bb241589d2dfd2208604bad513073eecc))
+* **deps:** update dependency sqlalchemy to v2.0.43 ([#187](https://github.com/big-unibo/predict/issues/187)) ([76397b3](https://github.com/big-unibo/predict/commit/76397b39dd98d467fd6ee7fe3fd497baef93621d))
+* **deps:** update node.js to 22.18 ([#183](https://github.com/big-unibo/predict/issues/183)) ([62b7b22](https://github.com/big-unibo/predict/commit/62b7b22f856860dd342ed222057032b71e899bed))
+* **deps:** update node.js to 22.19 ([#193](https://github.com/big-unibo/predict/issues/193)) ([c929886](https://github.com/big-unibo/predict/commit/c929886115b81f7cf06e1650461ccb257ae5677e))
+
+### Bug Fixes
+
+* **deps:** update dependency com.fasterxml.jackson.dataformat:jackson-dataformat-yaml to v2.20.0 ([#194](https://github.com/big-unibo/predict/issues/194)) ([de77e03](https://github.com/big-unibo/predict/commit/de77e0389a69d05957de5fba08f5a3ed033f0137))
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v4.3.0 ([#186](https://github.com/big-unibo/predict/issues/186)) ([20745c3](https://github.com/big-unibo/predict/commit/20745c3eea1f8e9610388a50a29ee6fe6c4ff3a5))
+* **deps:** update actions/checkout action to v5 ([#188](https://github.com/big-unibo/predict/issues/188)) ([9956cc1](https://github.com/big-unibo/predict/commit/9956cc15f8c89c6b542d78c2a4a0cc677ae6daa7))
+* **deps:** update actions/setup-java action to v5 ([#191](https://github.com/big-unibo/predict/issues/191)) ([fd630d6](https://github.com/big-unibo/predict/commit/fd630d6763572dabdb67284ad2a02419a58ed57b))
+
 ## [1.0.54](https://github.com/big-unibo/predict/compare/1.0.53...1.0.54) (2025-07-31)
 
 ### Dependency updates
