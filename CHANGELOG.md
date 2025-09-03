@@ -1,3 +1,9 @@
+## [1.0.56](https://github.com/big-unibo/predict/compare/1.0.55...1.0.56) (2025-09-03)
+
+### Bug Fixes
+
+* **deps:** update dependency com.fasterxml.jackson.datatype:jackson-datatype-jsr310 to v2.20.0 ([#195](https://github.com/big-unibo/predict/issues/195)) ([128de1d](https://github.com/big-unibo/predict/commit/128de1d203ba04ec6cb4849d27a9a1172c46dc78))
+
 ## [1.0.55](https://github.com/big-unibo/predict/compare/1.0.54...1.0.55) (2025-09-02)
 
 ### Dependency updates
