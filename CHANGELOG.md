@@ -1,3 +1,21 @@
+## [1.0.57](https://github.com/big-unibo/predict/compare/1.0.56...1.0.57) (2025-09-18)
+
+### Dependency updates
+
+* **deps:** update dependency scikit-learn to v1.7.2 ([#200](https://github.com/big-unibo/predict/issues/200)) ([2d2609e](https://github.com/big-unibo/predict/commit/2d2609e62bcba38dad84300d3ca351646f6d8e62))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.142 ([#198](https://github.com/big-unibo/predict/issues/198)) ([5cff14b](https://github.com/big-unibo/predict/commit/5cff14b95b240c702e13eb8bf2114802868ec057))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.143 ([#199](https://github.com/big-unibo/predict/issues/199)) ([bb3c5ad](https://github.com/big-unibo/predict/commit/bb3c5ade5b03768455539ace8d1d5f8c8ff440c2))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.145 ([#201](https://github.com/big-unibo/predict/issues/201)) ([dc7eb1f](https://github.com/big-unibo/predict/commit/dc7eb1f9ae91f5b88382a0773a959b92c88e2bd1))
+
+### Bug Fixes
+
+* **deps:** update dependency com.google.guava:guava to v33.5.0-jre ([#202](https://github.com/big-unibo/predict/issues/202)) ([c587abe](https://github.com/big-unibo/predict/commit/c587abe067895663ea94922419109623346aa9e4))
+
+### Build and continuous integration
+
+* **deps:** update actions/setup-node action to v5 ([#196](https://github.com/big-unibo/predict/issues/196)) ([0adac27](https://github.com/big-unibo/predict/commit/0adac27bb289c4ec5e8865df7831da794700e2ff))
+* **deps:** update actions/setup-python action to v6 ([#197](https://github.com/big-unibo/predict/issues/197)) ([6d91552](https://github.com/big-unibo/predict/commit/6d9155299e810ba79c322994d582fa67af25e1db))
+
 ## [1.0.56](https://github.com/big-unibo/predict/compare/1.0.55...1.0.56) (2025-09-03)
 
 ### Bug Fixes
