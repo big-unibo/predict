@@ -1,3 +1,14 @@
+## [1.0.58](https://github.com/big-unibo/predict/compare/1.0.57...1.0.58) (2025-09-25)
+
+### Dependency updates
+
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.146 ([#203](https://github.com/big-unibo/predict/issues/203)) ([3577c4e](https://github.com/big-unibo/predict/commit/3577c4e383c5563753a74d4366cf950cdb3bcfa7))
+* **deps:** update node.js to 22.20 ([#204](https://github.com/big-unibo/predict/issues/204)) ([9a34328](https://github.com/big-unibo/predict/commit/9a34328e8416dbdedf9212f82f677d69fd1ee18f))
+
+### Bug Fixes
+
+* **deps:** update dependency org.apache.commons:commons-lang3 to v3.19.0 ([#205](https://github.com/big-unibo/predict/issues/205)) ([4273d27](https://github.com/big-unibo/predict/commit/4273d27cc46d329be879e0ded336f491e2beb7c9))
+
 ## [1.0.57](https://github.com/big-unibo/predict/compare/1.0.56...1.0.57) (2025-09-18)
 
 ### Dependency updates
