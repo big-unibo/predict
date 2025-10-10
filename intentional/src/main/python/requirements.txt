@@ -15,7 +15,7 @@ autots==0.6.21
 prophet==1.1.7
 statsmodels==0.14.5
 python-dotenv==1.1.1
-psycopg2-binary==2.9.10
+psycopg2-binary==2.9.11
 pyarrow==21.0.0
 minepy==1.2.6
 jupyter==1.1.1
