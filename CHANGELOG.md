@@ -1,3 +1,30 @@
+## [1.0.59](https://github.com/big-unibo/predict/compare/1.0.58...1.0.59) (2025-10-31)
+
+### Dependency updates
+
+* **deps:** update dependency notebook to v7.4.6 ([#206](https://github.com/big-unibo/predict/issues/206)) ([732faa7](https://github.com/big-unibo/predict/commit/732faa78ff9e5e107dd6e293a8f763037b1a10d2))
+* **deps:** update dependency notebook to v7.4.7 ([#208](https://github.com/big-unibo/predict/issues/208)) ([804143e](https://github.com/big-unibo/predict/commit/804143e21bb3d5877b50ae8282e797a16fd1446b))
+* **deps:** update dependency prophet to v1.2.0 ([#215](https://github.com/big-unibo/predict/issues/215)) ([43922be](https://github.com/big-unibo/predict/commit/43922bec4715427750999aa7b497924f446a275d))
+* **deps:** update dependency prophet to v1.2.1 ([#217](https://github.com/big-unibo/predict/issues/217)) ([5190a99](https://github.com/big-unibo/predict/commit/5190a9914236406b83dec87a1a36a1486cc16d41))
+* **deps:** update dependency psycopg2-binary to v2.9.11 ([#210](https://github.com/big-unibo/predict/issues/210)) ([61dc6aa](https://github.com/big-unibo/predict/commit/61dc6aa7edfcd50036a26ea96d05a3eaebadba1c))
+* **deps:** update dependency pyarrow to v22 ([#222](https://github.com/big-unibo/predict/issues/222)) ([1b59b31](https://github.com/big-unibo/predict/commit/1b59b3193d2291551d89a1945796667abfd96a27))
+* **deps:** update dependency python-dotenv to v1.2.1 ([#223](https://github.com/big-unibo/predict/issues/223)) ([6d715ce](https://github.com/big-unibo/predict/commit/6d715ce045a072522df5a2f32377200844d3813c))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.147 ([#207](https://github.com/big-unibo/predict/issues/207)) ([fa3cf2d](https://github.com/big-unibo/predict/commit/fa3cf2d0f4cdd8df9dc96bbc74b0953df37dc156))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.148 ([#213](https://github.com/big-unibo/predict/issues/213)) ([e88fca9](https://github.com/big-unibo/predict/commit/e88fca93f3398cfb0de17008e5b7a77dbd78db7c))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.149 ([#214](https://github.com/big-unibo/predict/issues/214)) ([76f6b89](https://github.com/big-unibo/predict/commit/76f6b8935a1574f15264da0bbbcc49f171763424))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.152 ([#218](https://github.com/big-unibo/predict/issues/218)) ([9ac5f43](https://github.com/big-unibo/predict/commit/9ac5f433a4f863e4b94ec2255dbd0863ed1254a8))
+* **deps:** update dependency sqlalchemy to v2.0.44 ([#211](https://github.com/big-unibo/predict/issues/211)) ([d016ed5](https://github.com/big-unibo/predict/commit/d016ed5bbbf3146e49ba6e165ca531497ae2669a))
+* **deps:** update node.js to 22.21 ([#216](https://github.com/big-unibo/predict/issues/216)) ([f1d79c0](https://github.com/big-unibo/predict/commit/f1d79c07ebf5aa01838aa0c8a332dd4d515afa38))
+* **deps:** update node.js to v24 ([#224](https://github.com/big-unibo/predict/issues/224)) ([007a634](https://github.com/big-unibo/predict/commit/007a6341743d56f4a746907806597b57d1bff680))
+
+### Bug Fixes
+
+* **deps:** update dependency com.fasterxml.jackson.dataformat:jackson-dataformat-yaml to v2.20.1 ([#225](https://github.com/big-unibo/predict/issues/225)) ([4cffbd9](https://github.com/big-unibo/predict/commit/4cffbd932183ce209cfa4aa8e2ed7073f16e2bab))
+
+### Build and continuous integration
+
+* **deps:** update actions/setup-node action to v6 ([#212](https://github.com/big-unibo/predict/issues/212)) ([1be0eba](https://github.com/big-unibo/predict/commit/1be0ebacc637a33a278f0a1d850d5852cb39c769))
+
 ## [1.0.58](https://github.com/big-unibo/predict/compare/1.0.57...1.0.58) (2025-09-25)
 
 ### Dependency updates
