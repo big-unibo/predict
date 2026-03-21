@@ -1,3 +1,22 @@
+## [1.0.65](https://github.com/big-unibo/predict/compare/1.0.64...1.0.65) (2026-03-21)
+
+### Dependency updates
+
+* **deps:** update dependency notebook to v7.5.4 ([#261](https://github.com/big-unibo/predict/issues/261)) ([549e71f](https://github.com/big-unibo/predict/commit/549e71fcc54b6214267e84c906a99c64cc5798d3))
+* **deps:** update dependency notebook to v7.5.5 ([#267](https://github.com/big-unibo/predict/issues/267)) ([9d3fa70](https://github.com/big-unibo/predict/commit/9d3fa70c67a5e9f199ce6edd56d1bec753c974bb))
+* **deps:** update dependency python-dotenv to v1.2.2 ([#264](https://github.com/big-unibo/predict/issues/264)) ([b89c44f](https://github.com/big-unibo/predict/commit/b89c44f5e976e28217e5a65c0c91c973f9f5f412))
+* **deps:** update dependency sqlalchemy to v2.0.47 ([#262](https://github.com/big-unibo/predict/issues/262)) ([7c14604](https://github.com/big-unibo/predict/commit/7c146041e0da43132a3330976b178a966d209223))
+* **deps:** update dependency sqlalchemy to v2.0.48 ([#265](https://github.com/big-unibo/predict/issues/265)) ([a684a47](https://github.com/big-unibo/predict/commit/a684a477b3222d90825a0c017367bf2f4beb93f7))
+* **deps:** update node.js to 24.14 ([#263](https://github.com/big-unibo/predict/issues/263)) ([5046b56](https://github.com/big-unibo/predict/commit/5046b5622d6e4b6d6f531bceb1983ed834b4c39b))
+
+### Bug Fixes
+
+* **deps:** update jackson monorepo to v2.21.2 ([#268](https://github.com/big-unibo/predict/issues/268)) ([f4d55aa](https://github.com/big-unibo/predict/commit/f4d55aa4b06c364061dab36e029c5f3c9a41d605))
+
+### Build and continuous integration
+
+* **deps:** update actions/setup-node action to v6.3.0 ([#266](https://github.com/big-unibo/predict/issues/266)) ([7fa4a7c](https://github.com/big-unibo/predict/commit/7fa4a7c2046aac36c4e4127e71d3c35f3849230b))
+
 ## [1.0.64](https://github.com/big-unibo/predict/compare/1.0.63...1.0.64) (2026-02-23)
 
 ### Dependency updates
