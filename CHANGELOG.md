@@ -1,3 +1,16 @@
+## [1.0.66](https://github.com/big-unibo/predict/compare/1.0.65...1.0.66) (2026-04-11)
+
+### Dependency updates
+
+* **deps:** update dependency autots to v1.0.2 ([#270](https://github.com/big-unibo/predict/issues/270)) ([b8e655c](https://github.com/big-unibo/predict/commit/b8e655c217b0da945090ce11cb66cd9c8b2276cb))
+* **deps:** update dependency requests to v2.33.0 ([#269](https://github.com/big-unibo/predict/issues/269)) ([8f779d3](https://github.com/big-unibo/predict/commit/8f779d3422736f747ea49cd182c3bcca405100fc))
+* **deps:** update dependency requests to v2.33.1 ([#271](https://github.com/big-unibo/predict/issues/271)) ([32d388b](https://github.com/big-unibo/predict/commit/32d388b9d298a89e598fec41dcfc8491cdd11172))
+* **deps:** update dependency sqlalchemy to v2.0.49 ([#272](https://github.com/big-unibo/predict/issues/272)) ([ed291a4](https://github.com/big-unibo/predict/commit/ed291a4a3dc154df3f79051165bb9136664f3e90))
+
+### Bug Fixes
+
+* **deps:** update dependency org.jgrapht:jgrapht-core to v1.5.3 ([#273](https://github.com/big-unibo/predict/issues/273)) ([6961528](https://github.com/big-unibo/predict/commit/6961528535baa14af4b9d10bbaf7b5f0dfaa34cd))
+
 ## [1.0.65](https://github.com/big-unibo/predict/compare/1.0.64...1.0.65) (2026-03-21)
 
 ### Dependency updates
