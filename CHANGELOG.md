@@ -1,3 +1,14 @@
+## [1.0.67](https://github.com/big-unibo/predict/compare/1.0.66...1.0.67) (2026-04-17)
+
+### Dependency updates
+
+* **deps:** update dependency autots to v1.0.3 ([#274](https://github.com/big-unibo/predict/issues/274)) ([6049a44](https://github.com/big-unibo/predict/commit/6049a44930e481e9452be0176f6aece789e09c96))
+* **deps:** update node.js to 24.15 ([#276](https://github.com/big-unibo/predict/issues/276)) ([d4e1792](https://github.com/big-unibo/predict/commit/d4e1792981f3b28343ceff475fecb39331b0b240))
+
+### Bug Fixes
+
+* **deps:** update dependency com.google.guava:guava to v33.6.0-jre ([#275](https://github.com/big-unibo/predict/issues/275)) ([e36ce42](https://github.com/big-unibo/predict/commit/e36ce42a58e2526bac48e301b363d54af0f46183))
+
 ## [1.0.66](https://github.com/big-unibo/predict/compare/1.0.65...1.0.66) (2026-04-11)
 
 ### Dependency updates
