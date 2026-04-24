@@ -1,3 +1,18 @@
+## [1.0.68](https://github.com/big-unibo/predict/compare/1.0.67...1.0.68) (2026-04-24)
+
+### Dependency updates
+
+* **deps:** update dependency psycopg2-binary to v2.9.12 ([#278](https://github.com/big-unibo/predict/issues/278)) ([b54f8a5](https://github.com/big-unibo/predict/commit/b54f8a5be1c9f224d9777d446ef94b5632193b17))
+* **deps:** update dependency pyarrow to v24 ([#279](https://github.com/big-unibo/predict/issues/279)) ([27e6d25](https://github.com/big-unibo/predict/commit/27e6d25c3f12144a5df9546b13e9fbaef0a2646d))
+
+### Bug Fixes
+
+* **deps:** update dependency commons-io:commons-io to v2.22.0 ([#280](https://github.com/big-unibo/predict/issues/280)) ([5d6d59e](https://github.com/big-unibo/predict/commit/5d6d59e772497135c396fb0cbbc15fa6dcdc0d55))
+
+### Build and continuous integration
+
+* **deps:** update actions/setup-node action to v6.4.0 ([#277](https://github.com/big-unibo/predict/issues/277)) ([5e3d4cc](https://github.com/big-unibo/predict/commit/5e3d4cc2ccc4d5b4b9c142bc83f6037272e1b98d))
+
 ## [1.0.67](https://github.com/big-unibo/predict/compare/1.0.66...1.0.67) (2026-04-17)
 
 ### Dependency updates
