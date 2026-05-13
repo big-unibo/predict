@@ -1,3 +1,14 @@
+## [1.0.70](https://github.com/big-unibo/predict/compare/1.0.69...1.0.70) (2026-05-13)
+
+### Dependency updates
+
+* **deps:** update dependency notebook to v7.5.6 ([#282](https://github.com/big-unibo/predict/issues/282)) ([4cdb77f](https://github.com/big-unibo/predict/commit/4cdb77f7395329e8bd56d27a513b05676528d8eb))
+* **deps:** update dependency requests to v2.34.0 ([#283](https://github.com/big-unibo/predict/issues/283)) ([e427680](https://github.com/big-unibo/predict/commit/e4276800e1964b9573eca7e1e2eadfa554cdfc23))
+
+### Bug Fixes
+
+* **deps:** update slf4j monorepo to v2.0.18 ([#284](https://github.com/big-unibo/predict/issues/284)) ([fccb9e4](https://github.com/big-unibo/predict/commit/fccb9e4ba712068ffaa6d74225674a1357aeea72))
+
 ## [1.0.69](https://github.com/big-unibo/predict/compare/1.0.68...1.0.69) (2026-04-29)
 
 ### Bug Fixes
