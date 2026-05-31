@@ -1,3 +1,16 @@
+## [1.0.71](https://github.com/big-unibo/predict/compare/1.0.70...1.0.71) (2026-05-31)
+
+### Dependency updates
+
+* **deps:** update dependency requests to v2.34.1 ([#285](https://github.com/big-unibo/predict/issues/285)) ([e3492cd](https://github.com/big-unibo/predict/commit/e3492cdd5422d4fdbe47116847968511c742da9f))
+* **deps:** update dependency requests to v2.34.2 ([#286](https://github.com/big-unibo/predict/issues/286)) ([8cf1efd](https://github.com/big-unibo/predict/commit/8cf1efddd2c9f9130463e9fc7c3f0e290aed8a8f))
+* **deps:** update dependency sqlalchemy to v2.0.50 ([#288](https://github.com/big-unibo/predict/issues/288)) ([e5b6923](https://github.com/big-unibo/predict/commit/e5b69232ab8f5920d74b9cca0de7646b9091c9d1))
+* **deps:** update node.js to 24.16 ([#287](https://github.com/big-unibo/predict/issues/287)) ([67d40e6](https://github.com/big-unibo/predict/commit/67d40e644809d8c38f3bc5617b7e2faa0fe91f8e))
+
+### Bug Fixes
+
+* **deps:** update jackson monorepo to v2.21.4 ([#289](https://github.com/big-unibo/predict/issues/289)) ([ac2a5d2](https://github.com/big-unibo/predict/commit/ac2a5d255b10e4905d07b8796539aa473ac22f41))
+
 ## [1.0.70](https://github.com/big-unibo/predict/compare/1.0.69...1.0.70) (2026-05-13)
 
 ### Dependency updates
