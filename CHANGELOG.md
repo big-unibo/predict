@@ -1,3 +1,23 @@
+## [1.0.73](https://github.com/big-unibo/predict/compare/1.0.72...1.0.73) (2026-07-08)
+
+### Dependency updates
+
+* **deps:** update dependency notebook to v7.6.0 ([#299](https://github.com/big-unibo/predict/issues/299)) ([d47614e](https://github.com/big-unibo/predict/commit/d47614e5816859001a81adc98251763571526bca))
+* **deps:** update dependency sqlalchemy to v2.0.51 ([#296](https://github.com/big-unibo/predict/issues/296)) ([1cef5e6](https://github.com/big-unibo/predict/commit/1cef5e63b04ca8978b581bbc99c64b46ccf0afbb))
+* **deps:** update node.js to 24.17 ([#298](https://github.com/big-unibo/predict/issues/298)) ([b71db8b](https://github.com/big-unibo/predict/commit/b71db8b83f38892be95d9a57f7a330f695e4d13c))
+* **deps:** update node.js to 24.18 ([#301](https://github.com/big-unibo/predict/issues/301)) ([e2448be](https://github.com/big-unibo/predict/commit/e2448be79d3797020438ff5a36bb19771b63482f))
+
+### Bug Fixes
+
+* **deps:** update jackson monorepo to v2.22.1 ([#304](https://github.com/big-unibo/predict/issues/304)) ([95a88d3](https://github.com/big-unibo/predict/commit/95a88d3699cab2a7f2dc69856a78eddab59b4c4f))
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v7 ([#300](https://github.com/big-unibo/predict/issues/300)) ([0895a9f](https://github.com/big-unibo/predict/commit/0895a9fef381670361140c63bcaa46a164173915))
+* **deps:** update actions/setup-java action to v5.3.0 ([#297](https://github.com/big-unibo/predict/issues/297)) ([b7538bc](https://github.com/big-unibo/predict/commit/b7538bcfd9cdb80089a4268fba9f692ac86715f9))
+* **deps:** update actions/setup-java action to v5.4.0 ([#302](https://github.com/big-unibo/predict/issues/302)) ([abd96ed](https://github.com/big-unibo/predict/commit/abd96edffd20d7bf3c338287feefc8bf46048530))
+* **deps:** update actions/setup-java action to v5.5.0 ([#303](https://github.com/big-unibo/predict/issues/303)) ([2144018](https://github.com/big-unibo/predict/commit/214401800312f0f835b53f2288f0ecba11ed201f))
+
 ## [1.0.72](https://github.com/big-unibo/predict/compare/1.0.71...1.0.72) (2026-06-05)
 
 ### Dependency updates
