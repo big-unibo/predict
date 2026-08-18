@@ -1,3 +1,30 @@
+## [1.0.74](https://github.com/big-unibo/predict/compare/1.0.73...1.0.74) (2026-08-18)
+
+### Dependency updates
+
+* **deps:** update dependency notebook to v7.6.1 ([#314](https://github.com/big-unibo/predict/issues/314)) ([54b365c](https://github.com/big-unibo/predict/commit/54b365cf61d78c6c4674de03155fa1bf3522c80c))
+* **deps:** update dependency notebook to v7.6.2 ([#318](https://github.com/big-unibo/predict/issues/318)) ([0e1e6d0](https://github.com/big-unibo/predict/commit/0e1e6d08b65fd6c26f35d8586025dfd40b5a0c50))
+* **deps:** update dependency prophet to v1.4.0 ([#323](https://github.com/big-unibo/predict/issues/323)) ([acc0b14](https://github.com/big-unibo/predict/commit/acc0b149a6a7dfcc536a6f037b14ec37a7b70f2c))
+* **deps:** update dependency pyarrow to v25 ([#308](https://github.com/big-unibo/predict/issues/308)) ([4425192](https://github.com/big-unibo/predict/commit/44251922f9ee88c2a922ed9b9a40f3b541003447))
+* **deps:** update dependency pyarrow to v25.0.1 ([#317](https://github.com/big-unibo/predict/issues/317)) ([b74253d](https://github.com/big-unibo/predict/commit/b74253d6dfa7c3df0d11e79e1ebd8c5085c717ee))
+* **deps:** update dependency python-dotenv to v1.2.3 ([#324](https://github.com/big-unibo/predict/issues/324)) ([0d8cb04](https://github.com/big-unibo/predict/commit/0d8cb04057c94c89009cd64c6160b05dd98d2046))
+* **deps:** update dependency sqlalchemy to v2.0.52 ([#319](https://github.com/big-unibo/predict/issues/319)) ([47d3fe4](https://github.com/big-unibo/predict/commit/47d3fe4fa75e6f3aedfae8da2e25cf0733abbbda))
+* **deps:** update node.js to 24.19 ([#316](https://github.com/big-unibo/predict/issues/316)) ([d6f6df3](https://github.com/big-unibo/predict/commit/d6f6df3e321a7e45592b29d4e5d2c488d2099a53))
+
+### Bug Fixes
+
+* **deps:** update dependency com.google.guava:guava to v33.7.1-jre ([#326](https://github.com/big-unibo/predict/issues/326)) ([a2a3098](https://github.com/big-unibo/predict/commit/a2a309852be60e39af876208919eabee7e2811d0))
+* **deps:** update jackson monorepo to v2.22.2 ([#325](https://github.com/big-unibo/predict/issues/325)) ([a296e28](https://github.com/big-unibo/predict/commit/a296e28bbfde2b115e6025e02e58efcec0e00917))
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v7.0.1 ([#313](https://github.com/big-unibo/predict/issues/313)) ([bf7aab5](https://github.com/big-unibo/predict/commit/bf7aab5088a9572e5e8f53d514b73e48d6e4c909))
+* **deps:** update actions/setup-java action to v5.6.0 ([#311](https://github.com/big-unibo/predict/issues/311)) ([a415645](https://github.com/big-unibo/predict/commit/a41564594d5f4822a0d3e2b999c760cdc2df5c29))
+* **deps:** update actions/setup-java action to v5.7.0 ([#315](https://github.com/big-unibo/predict/issues/315)) ([44eebc3](https://github.com/big-unibo/predict/commit/44eebc3518895bf55d9d1c9ef578bfa9e1a6f38d))
+* **deps:** update actions/setup-node action to v6.5.0 ([#309](https://github.com/big-unibo/predict/issues/309)) ([b0464bd](https://github.com/big-unibo/predict/commit/b0464bd469368e627ac867741cc0446a73547e2c))
+* **deps:** update actions/setup-node action to v7 ([#310](https://github.com/big-unibo/predict/issues/310)) ([7d57832](https://github.com/big-unibo/predict/commit/7d578329cc766f2231d1f24c7cb02b28cbb4e4e2))
+* **deps:** update actions/setup-python action to v7 ([#312](https://github.com/big-unibo/predict/issues/312)) ([8d17b27](https://github.com/big-unibo/predict/commit/8d17b27ad56e6a487d16f7dc060668c7b5359b93))
+
 ## [1.0.73](https://github.com/big-unibo/predict/compare/1.0.72...1.0.73) (2026-07-08)
 
 ### Dependency updates
