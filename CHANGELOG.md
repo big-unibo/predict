@@ -1,3 +1,15 @@
+## [1.0.75](https://github.com/big-unibo/predict/compare/1.0.74...1.0.75) (2026-09-05)
+
+### Dependency updates
+
+* **deps:** update dependency autots to v1.0.4 ([#327](https://github.com/big-unibo/predict/issues/327)) ([c04b1c1](https://github.com/big-unibo/predict/commit/c04b1c17d2012de1c69be11f6f413298a5e1792b))
+* **deps:** update dependency statsmodels to v0.15.0 ([#330](https://github.com/big-unibo/predict/issues/330)) ([9044f92](https://github.com/big-unibo/predict/commit/9044f92b6218d39d059aafe15b2a48d94f277169))
+* **deps:** update node.js to 24.20 ([#329](https://github.com/big-unibo/predict/issues/329)) ([ceae063](https://github.com/big-unibo/predict/commit/ceae063bed79b595ee2503442e4ce5b112ca05a4))
+
+### Bug Fixes
+
+* **deps:** update slf4j monorepo to v2.0.19 ([#331](https://github.com/big-unibo/predict/issues/331)) ([21745aa](https://github.com/big-unibo/predict/commit/21745aada358acd9ae61eae5b17fe02bf5cb3158))
+
 ## [1.0.74](https://github.com/big-unibo/predict/compare/1.0.73...1.0.74) (2026-08-18)
 
 ### Dependency updates
