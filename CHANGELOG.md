@@ -1,3 +1,21 @@
+## [1.0.76](https://github.com/big-unibo/predict/compare/1.0.75...1.0.76) (2026-09-23)
+
+### Dependency updates
+
+* **deps:** update dependency notebook to v7.6.3 ([#343](https://github.com/big-unibo/predict/issues/343)) ([29ed3ee](https://github.com/big-unibo/predict/commit/29ed3eea183c9b7d62c6cf77c618a6305131951b))
+* **deps:** update dependency psycopg2-binary to v2.9.13 ([#332](https://github.com/big-unibo/predict/issues/332)) ([5f367d5](https://github.com/big-unibo/predict/commit/5f367d5b32d119e6afd8d026417f12df93dbc7a8))
+* **deps:** update dependency sqlalchemy to v2.0.53 ([#337](https://github.com/big-unibo/predict/issues/337)) ([c3572c6](https://github.com/big-unibo/predict/commit/c3572c6c7e22e477d87395db9740b4f77e045479))
+* **deps:** update dependency sqlalchemy to v2.0.54 ([#341](https://github.com/big-unibo/predict/issues/341)) ([fb520a4](https://github.com/big-unibo/predict/commit/fb520a424a7a6b491aebc6c0a8d7d63f1441f097))
+* **deps:** update node.js to 24.21 ([#334](https://github.com/big-unibo/predict/issues/334)) ([c4a0b0b](https://github.com/big-unibo/predict/commit/c4a0b0ba2d0c32576d611fb3499a3070192f9394))
+
+### Bug Fixes
+
+* **deps:** update jackson monorepo to v2.22.3 ([#344](https://github.com/big-unibo/predict/issues/344)) ([372dfe8](https://github.com/big-unibo/predict/commit/372dfe8a9a20a2fca229f72ed8748ccf4e3bca5b))
+
+### Build and continuous integration
+
+* **deps:** update dependency java-jdk to v17 ([#338](https://github.com/big-unibo/predict/issues/338)) ([668f6f4](https://github.com/big-unibo/predict/commit/668f6f4ce59e3bd51bbca0d9fcea8515908ffebd))
+
 ## [1.0.75](https://github.com/big-unibo/predict/compare/1.0.74...1.0.75) (2026-09-05)
 
 ### Dependency updates
