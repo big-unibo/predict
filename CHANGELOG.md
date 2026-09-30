@@ -1,3 +1,9 @@
+## [1.0.79](https://github.com/big-unibo/predict/compare/1.0.78...1.0.79) (2026-09-30)
+
+### Bug Fixes
+
+* **deps:** update dependency com.google.guava:guava to v33.7.2-jre ([#348](https://github.com/big-unibo/predict/issues/348)) ([aff81f5](https://github.com/big-unibo/predict/commit/aff81f550d817f0fd004fbf333eaa786ffbbc683))
+
 ## [1.0.78](https://github.com/big-unibo/predict/compare/1.0.77...1.0.78) (2026-09-29)
 
 ### Bug Fixes
