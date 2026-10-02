@@ -1,3 +1,13 @@
+## [1.0.80](https://github.com/big-unibo/predict/compare/1.0.79...1.0.80) (2026-10-02)
+
+### Dependency updates
+
+* **deps:** update dependency python-dotenv to v1.2.4 ([#350](https://github.com/big-unibo/predict/issues/350)) ([1aaf9f7](https://github.com/big-unibo/predict/commit/1aaf9f7a664368cf832e793337dcdf9b22aedd35))
+
+### Bug Fixes
+
+* **deps:** update dependency org.apache.commons:commons-lang3 to v3.21.0 ([#349](https://github.com/big-unibo/predict/issues/349)) ([5c9ece9](https://github.com/big-unibo/predict/commit/5c9ece94642248f8d7a067f3302594dcbefaf14d))
+
 ## [1.0.79](https://github.com/big-unibo/predict/compare/1.0.78...1.0.79) (2026-09-30)
 
 ### Bug Fixes
