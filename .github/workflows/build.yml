@@ -21,7 +21,7 @@ jobs:
           java-version: '17.0.21+9'
       - uses: actions/setup-python@v7
         with:
-          python-version: '3.10'
+          python-version: '3.15'
       - name: Run
         run: |
           cd intentional
