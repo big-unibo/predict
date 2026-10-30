@@ -16,6 +16,6 @@ prophet==1.5.0
 statsmodels==0.15.0
 python-dotenv==1.2.4
 psycopg2-binary==2.9.13
-pyarrow==25.0.1
+pyarrow==26.0.0
 minepy==1.2.6
 jupyter==1.1.1
