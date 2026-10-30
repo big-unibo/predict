@@ -1,3 +1,17 @@
+## [1.0.82](https://github.com/big-unibo/predict/compare/1.0.81...1.0.82) (2026-10-30)
+
+### Dependency updates
+
+* **deps:** update node.js to v26 ([#361](https://github.com/big-unibo/predict/issues/361)) ([601a8cc](https://github.com/big-unibo/predict/commit/601a8cc992c02482ea7b67db5190c0e81a5d9d06))
+
+### Bug Fixes
+
+* **deps:** update dependency org.jooq:jool to v0.9.16 ([#362](https://github.com/big-unibo/predict/issues/362)) ([4f6727c](https://github.com/big-unibo/predict/commit/4f6727cce60605138f13144193a3e2d4d11d6e46))
+
+### Build and continuous integration
+
+* **deps:** update dependency java-jdk to v17.0.21+9 ([#360](https://github.com/big-unibo/predict/issues/360)) ([b361975](https://github.com/big-unibo/predict/commit/b361975ec716c3d49ca2e838c903d6bea904415f))
+
 ## [1.0.81](https://github.com/big-unibo/predict/compare/1.0.80...1.0.81) (2026-10-18)
 
 ### Dependency updates
