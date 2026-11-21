@@ -1,3 +1,21 @@
+## [1.0.83](https://github.com/big-unibo/predict/compare/1.0.82...1.0.83) (2026-11-21)
+
+### Dependency updates
+
+* **deps:** update dependency autots to v1.0.5 ([#364](https://github.com/big-unibo/predict/issues/364)) ([6d98ca7](https://github.com/big-unibo/predict/commit/6d98ca7acc3976676d56ce6cf2925bcd3250a047))
+* **deps:** update dependency notebook to v7.6.4 ([#363](https://github.com/big-unibo/predict/issues/363)) ([573def3](https://github.com/big-unibo/predict/commit/573def3908e5aaac52676267d8135fc832350512))
+* **deps:** update dependency notebook to v7.6.5 ([#365](https://github.com/big-unibo/predict/issues/365)) ([984bb4f](https://github.com/big-unibo/predict/commit/984bb4fb442716427359df3540c8e9df13be0cfd))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.160 ([#366](https://github.com/big-unibo/predict/issues/366)) ([b041291](https://github.com/big-unibo/predict/commit/b04129162d34537b16b463a7710c37d061c1bb31))
+* **deps:** update dependency sqlalchemy to v2.0.58 ([#367](https://github.com/big-unibo/predict/issues/367)) ([b8742d8](https://github.com/big-unibo/predict/commit/b8742d842656f782fea7173c15e8f878a8637eca))
+
+### Bug Fixes
+
+* **deps:** update dependency org.apache.commons:commons-lang3 to v3.22.0 ([#368](https://github.com/big-unibo/predict/issues/368)) ([cc6cf54](https://github.com/big-unibo/predict/commit/cc6cf549ae72d989488b3dfd69c118962d5399de))
+
+### Build and continuous integration
+
+* **deps:** update dependency java-jdk to v17.0.21+100000002 ([#371](https://github.com/big-unibo/predict/issues/371)) ([a798470](https://github.com/big-unibo/predict/commit/a7984706310239214e06c7b5baf9d08e28cb4c49))
+
 ## [1.0.82](https://github.com/big-unibo/predict/compare/1.0.81...1.0.82) (2026-10-30)
 
 ### Dependency updates
