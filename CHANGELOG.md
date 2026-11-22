@@ -1,3 +1,9 @@
+## [1.0.84](https://github.com/big-unibo/predict/compare/1.0.83...1.0.84) (2026-11-22)
+
+### Bug Fixes
+
+* **deps:** update jackson monorepo to v2.23.0 ([#369](https://github.com/big-unibo/predict/issues/369)) ([87a03f0](https://github.com/big-unibo/predict/commit/87a03f08138671f134ed883d3bd9c20a97599c6b))
+
 ## [1.0.83](https://github.com/big-unibo/predict/compare/1.0.82...1.0.83) (2026-11-21)
 
 ### Dependency updates
